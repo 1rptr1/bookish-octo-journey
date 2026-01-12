@@ -1,0 +1,16 @@
+{
+  "name": "locator-gen",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "Generate DOM signals, test cases, and Selenide locators from a URL using Playwright.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "node-fetch": "^3.3.2",
+    "playwright": "^1.41.2"
+  }
+}
