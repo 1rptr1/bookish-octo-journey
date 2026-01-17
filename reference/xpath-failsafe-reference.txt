@@ -1,0 +1,61 @@
+# XPath Failsafe Reference Guide
+
+## Basic Locators
+- ID: `//*[@id='element-id']`
+- Name: `//*[@name='element-name']`
+- Class: `//*[contains(@class,'class-name')]`
+- Tag: `//tagname`
+- Text: `//*[text()='exact text']`
+- Contains text: `//*[contains(text(),'partial text')]`
+
+## Advanced Locators
+- Multiple attributes: `//*[@id='id' and @class='class']`
+- Index-based: `(//div)[2]`
+- Last element: `(//div)[last()]`
+- Position: `//div[position()=3]`
+
+## XPath Axes
+- Child: `//parent/child::div`
+- Parent: `//child/parent::div`
+- Following sibling: `//element/following-sibling::div`
+- Preceding sibling: `//element/preceding-sibling::div`
+- Following: `//element/following::div`
+- Preceding: `//element/preceding::div`
+- Ancestor: `//element/ancestor::div`
+- Descendant: `//parent/descendant::div`
+
+## Form Elements
+- Input by label: `//label[normalize-space()='Label Text']/following::input[1]`
+- Input by placeholder: `//input[@placeholder='Placeholder text']`
+- Button by text: `//button[normalize-space()='Button Text']`
+- Link by text: `//a[normalize-space()='Link Text']`
+- Select by label: `//label[normalize-space()='Label']/following::select[1]`
+
+## Dynamic Elements
+- Contains ID: `//*[contains(@id,'partial-id')]`
+- Starts with ID: `//*[starts-with(@id,'prefix')]`
+- Ends with ID: `//*[ends-with(@id,'suffix')]`
+- Contains class: `//*[contains(@class,'partial-class')]`
+
+## Tables
+- Cell by text: `//table//td[normalize-space()='cell text']`
+- Row by cell: `//table//tr[td[normalize-space()='cell text']]`
+- Header: `//table//th[normalize-space()='header text']`
+
+## Shadow DOM
+- Shadow host: `//div[@data-testid='shadow-host']`
+- Shadow content: Use JavaScript evaluation for shadow DOM elements
+
+## Error Handling
+- Always use normalize-space() for text comparison
+- Use contains() for partial matches
+- Use multiple attributes for specificity
+- Add fallback locators for dynamic content
+
+## Best Practices
+1. Prefer ID and unique attributes first
+2. Use text-based locators when IDs are not available
+3. Use XPath axes for complex relationships
+4. Always test locators in browser console
+5. Use relative XPaths over absolute paths
+6. Consider performance implications of complex XPaths

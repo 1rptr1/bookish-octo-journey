@@ -1,0 +1,35 @@
+==========================
+ POSITIVE CASES
+==========================
+- Valid email login
+- Valid form submission
+- Dropdown selection works
+
+==========================
+ NEGATIVE CASES
+==========================
+- Invalid email format
+- Empty required fields
+- Incorrect password
+- Invalid phone number
+
+==========================
+ EDGE CASES
+==========================
+- Very long input strings
+- Unicode characters
+- Leading/trailing spaces
+- Zero, negative numbers
+
+==========================
+ UX / UI CASES
+==========================
+- Tab order correct
+- Button disabled until valid
+- Mandatory asterisk presence
+
+==========================
+ SHADOW DOM TESTS
+==========================
+- Login inside shadow root
+- Validation inside shadow child

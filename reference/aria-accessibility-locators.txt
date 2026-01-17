@@ -1,0 +1,359 @@
+# Buttons
+//*[@role='button']
+//*[@aria-label='Add item']
+
+# Links
+//*[@role='link']
+
+# Forms
+//*[@aria-labelledby='email-label']
+
+# Dialogs
+//*[@role='dialog']
+
+# Modal dialogs
+//*[@role='dialog' and @aria-modal='true']
+
+# Alerts
+//*[@role='alert']
+
+# Status messages
+//*[@role='status']
+
+# Live regions
+//*[@aria-live='polite']
+//*[@aria-live='assertive']
+
+# Navigation
+//*[@role='navigation']
+
+# Main content
+//*[@role='main']
+
+# Search
+//*[@role='search']
+
+# Complementary content
+//*[@role='complementary']
+
+# Content info
+//*[@role='contentinfo']
+
+# Banner
+//*[@role='banner']
+
+# Form elements
+//*[@aria-required='true']
+//*[@aria-invalid='true']
+//*[@aria-describedby='error-message']
+
+# Labels
+//*[@aria-label='Close']
+//*[@aria-labelledby='label-id']
+
+# Descriptions
+//*[@aria-describedby='description-id']
+
+# Expanded/collapsed states
+//*[@aria-expanded='true']
+//*[@aria-expanded='false']
+
+# Selected states
+//*[@aria-selected='true']
+//*[@aria-selected='false']
+
+# Checked states
+//*[@aria-checked='true']
+//*[@aria-checked='false']
+//*[@aria-checked='mixed']
+
+# Disabled states
+//*[@aria-disabled='true']
+
+# Hidden elements
+//*[@aria-hidden='true']
+
+# Pressed states
+//*[@aria-pressed='true']
+//*[@aria-pressed='false']
+
+# Busy states
+//*[@aria-busy='true']
+
+# Current states
+//*[@aria-current='page']
+//*[@aria-current='step']
+//*[@aria-current='location']
+//*[@aria-current='date']
+//*[@aria-current='time']
+
+# Atomic regions
+//*[@aria-atomic='true']
+
+# Relevant regions
+//*[@aria-relevant='additions']
+//*[@aria-relevant='removals']
+//*[@aria-relevant='text']
+//*[@aria-relevant='all']
+
+# Dropeffect
+//*[@aria-dropeffect='copy']
+//*[@aria-dropeffect='move']
+//*[@aria-dropeffect='link']
+//*[@aria-dropeffect='execute']
+//*[@aria-dropeffect='popup']
+//*[@aria-dropeffect='none']
+
+# Grabbed
+//*[@aria-grabbed='true']
+//*[@aria-grabbed='false']
+
+# Haspopup
+//*[@aria-haspopup='true']
+//*[@aria-haspopup='false']
+//*[@aria-haspopup='menu']
+//*[@aria-haspopup='listbox']
+//*[@aria-haspopup='tree']
+//*[@aria-haspopup='grid']
+//*[@aria-haspopup='dialog']
+
+# Orientation
+//*[@aria-orientation='horizontal']
+//*[@aria-orientation='vertical']
+
+# Sort
+//*[@aria-sort='ascending']
+//*[@aria-sort='descending']
+//*[@aria-sort='none']
+//*[@aria-sort='other']
+
+# Level
+//*[@aria-level='1']
+//*[@aria-level='2']
+//*[@aria-level='3']
+
+# Posinset
+//*[@aria-posinset='1']
+//*[@aria-posinset='2']
+//*[@aria-posinset='3']
+
+# Setsize
+//*[@aria-setsize='5']
+//*[@aria-setsize='10']
+//*[@aria-setsize='20']
+
+# Controls
+//*[@aria-controls='element-id']
+
+# Flowto
+//*[@aria-flowto='element-id']
+
+# Labelledby
+//*[@aria-labelledby='label-id-1 label-id-2']
+
+# Ownd
+//*[@aria-owns='element-id']
+
+# Activedescendant
+//*[@aria-activedescendant='element-id']
+
+# Colcount
+//*[@aria-colcount='5']
+//*[@aria-colcount='10']
+
+# Colindex
+//*[@aria-colindex='1']
+//*[@aria-colindex='2']
+//*[@aria-colindex='3']
+
+# Colspan
+//*[@aria-colspan='1']
+//*[@aria-colspan='2']
+//*[@aria-colspan='3']
+
+# Rowcount
+//*[@aria-rowcount='5']
+//*[@aria-rowcount='10']
+
+# Rowindex
+//*[@aria-rowindex='1']
+//*[@aria-rowindex='2']
+//*[@aria-rowindex='3']
+
+# Rowspan
+//*[@aria-rowspan='1']
+//*[@aria-rowspan='2']
+//*[@aria-rowspan='3']
+
+# Multiselectable
+//*[@aria-multiselectable='true']
+//*[@aria-multiselectable='false']
+
+# Readonly
+//*[@aria-readonly='true']
+//*[@aria-readonly='false']
+
+# Required
+//*[@aria-required='true']
+//*[@aria-required='false']
+
+# Invalid
+//*[@aria-invalid='true']
+//*[@aria-invalid='false']
+//*[@aria-invalid='grammar']
+//*[@aria-invalid='spelling']
+
+# Errormessage
+//*[@aria-errormessage='error-id']
+
+# Braillelabel
+//*[@aria-braillelabel='Braille label']
+
+# Brailleroledescription
+//*[@aria-brailleroledescription='Braille role description']
+
+# Keyshortcuts
+//*[@aria-keyshortcuts='Alt+Shift+N']
+
+# Roledescription
+//*[@aria-roledescription='Custom role description']
+
+# Autocomplete
+//*[@aria-autocomplete='inline']
+//*[@aria-autocomplete='list']
+//*[@aria-autocomplete='both']
+//*[@aria-autocomplete='none']
+
+# Multiline
+//*[@aria-multiline='true']
+//*[@aria-multiline='false']
+
+# Placeholder
+//*[@aria-placeholder='Enter text here']
+
+# Embossed
+//*[@aria-embossed='true']
+//*[@aria-embossed='false']
+
+# Live regions with politeness
+//*[@aria-live='off']
+//*[@aria-live='polite']
+//*[@aria-live='assertive']
+
+# Atomic live regions
+//*[@aria-atomic='true']
+//*[@aria-atomic='false']
+
+# Relevant changes
+//*[@aria-relevant='additions text']
+//*[@aria-relevant='additions removals']
+//*[@aria-relevant='text all']
+
+# Busy indicators
+//*[@aria-busy='true']
+//*[@aria-busy='false']
+
+# Current page indicators
+//*[@aria-current='page']
+//*[@aria-current='step']
+//*[@aria-current='location']
+
+# Tree structures
+//*[@role='tree']
+//*[@role='treeitem']
+//*[@role='group']
+
+# Grid structures
+//*[@role='grid']
+//*[@role='gridcell']
+//*[@role='row']
+//*[@role='rowgroup']
+//*[@role='columnheader']
+//*[@role='rowheader']
+
+# List structures
+//*[@role='list']
+//*[@role='listitem']
+//*[@role='listbox']
+//*[@role='option']
+
+# Menu structures
+//*[@role='menu']
+//*[@role='menuitem']
+//*[@role='menuitemcheckbox']
+//*[@role='menuitemradio']
+//*[@role='menubar']
+
+# Tab structures
+//*[@role='tablist']
+//*[@role='tab']
+//*[@role='tabpanel']
+
+# Table structures
+//*[@role='table']
+//*[@role='cell']
+//*[@role='columnheader']
+//*[@role='row']
+//*[@role='rowgroup']
+//*[@role='rowheader']
+
+# Form structures
+//*[@role='form']
+//*[@role='search']
+//*[@role='textbox']
+//*[@role='combobox']
+//*[@role='spinbutton']
+//*[@role='slider']
+
+# Navigation structures
+//*[@role='navigation']
+//*[@role='link']
+//*[@role='button']
+
+# Document structures
+//*[@role='article']
+//*[@role='document']
+//*[@role='application']
+//*[@role='banner']
+//*[@role='complementary']
+//*[@role='contentinfo']
+//*[@role='main']
+//*[@role='region']
+//*[@role='search']
+//*[@role='tooltip']
+
+# Widget structures
+//*[@role='alert']
+//*[@role='alertdialog']
+//*[@role='dialog']
+//*[@role='log']
+//*[@role='marquee']
+//*[@role='status']
+//*[@role='timer']
+
+# Landmark structures
+//*[@role='application']
+//*[@role='banner']
+//*[@role='complementary']
+//*[@role='contentinfo']
+//*[@role='form']
+//*[@role='main']
+//*[@role='navigation']
+//*[@role='region']
+//*[@role='search']
+
+# Window structures
+//*[@role='dialog']
+//*[@role='alertdialog']
+
+# Abstract structures
+//*[@role='command']
+//*[@role='composite']
+//*[@role='input']
+//*[@role='range']
+//*[@role='section']
+//*[@role='sectionhead']
+//*[@role='select']
+//*[@role='structure']
+//*[@role='widget']
+//*[@role='window']

@@ -1,0 +1,321 @@
+# ID
+#email
+
+# Class
+.btn-primary
+
+# Combined
+button.btn.primary.large
+
+# Attributes
+input[type='email']
+input[required]
+button[data-test='delete']
+
+# Contains class
+[class*='container']
+
+# Starts with class
+[class^='header-']
+
+# Ends with class
+[class$='-active']
+
+# Exact class match
+[class='form-control']
+
+# Multiple classes
+.form-control.required
+
+# nth-child
+ul li:nth-child(3)
+
+# nth-of-type
+div:nth-of-type(2)
+
+# First child
+div:first-child
+
+# Last child
+div:last-child
+
+# Only child
+div:only-child
+
+# First of type
+div:first-of-type
+
+# Last of type
+div:last-of-type
+
+# Only of type
+div:only-of-type
+
+# State selectors
+input:focus
+button:disabled
+input:checked
+button:enabled
+
+# UI state selectors
+button:hover
+a:visited
+a:link
+a:active
+
+# Form selectors
+input:required
+input:optional
+input:valid
+input:invalid
+
+# Text-based selectors (limited CSS support)
+/* Note: CSS doesn't have direct text matching like XPath */
+/* Use data attributes or classes instead */
+
+# Attribute contains
+[title*='example']
+
+# Attribute starts with
+[href^='https']
+
+# Attribute ends with
+[src$='.jpg']
+
+# Attribute equals
+[type='text']
+
+# Attribute space separated
+[class~='active']
+
+# Attribute hyphen separated
+[lang|='en']
+
+# Attribute exists
+[disabled]
+
+# Multiple attributes
+input[type='text'][required][placeholder='Enter name']
+
+# Descendant combinator
+form input
+
+# Child combinator
+form > input
+
+# Adjacent sibling
+h1 + p
+
+# General sibling
+h1 ~ p
+
+# Pseudo-elements
+::before
+::after
+::first-line
+::first-letter
+
+# Shadow DOM CSS (inside shadow)
+:host
+:host(.active)
+:host-context(.dark-theme)
+
+# ::part() for styled parts
+custom-element::part(button)
+
+# ::slotted() for distributed content
+custom-element::slotted(div)
+
+# CSS custom properties targeting
+element { --custom-prop: value; }
+
+# Media query responsive selectors
+@media (max-width: 768px) {
+  .mobile-only { display: block; }
+}
+
+# Not selector
+button:not(.disabled)
+
+# Has selector (CSS 4)
+div:has(> .child)
+
+# Where selector (CSS 4)
+:where(h1, h2, h3)
+
+# Is selector (CSS 4)
+:is(section, article) > h1
+
+# Any link selector
+:any-link
+
+# Local link selector
+:local-link
+
+# Target selector
+:target
+
+# Scope selector
+:scope
+
+# Root selector
+:root
+
+# Empty selector
+div:empty
+
+# Lang selector
+:lang(en)
+
+# Dir selector
+[dir='rtl']
+
+# Read-only selector
+input:read-only
+
+# Read-write selector
+input:read-write
+
+# Placeholder shown selector
+input:placeholder-shown
+
+# Default selector
+input:default
+
+# Indeterminate selector
+input:indeterminate
+
+# Valid selector
+input:valid
+
+# Invalid selector
+input:invalid
+
+# In-range selector
+input:in-range
+
+# Out-of-range selector
+input:out-of-range
+
+# Required selector
+input:required
+
+# Optional selector
+input:optional
+
+# User-invalid selector
+input:user-invalid
+
+# Defined selector
+custom-element:defined
+
+# Focus-within selector
+form:focus-within
+
+# Focus-visible selector
+button:focus-visible
+
+# Current selector
+:current(p, li)
+
+# Past selector
+:past(div)
+
+# Future selector
+:future(div)
+
+# Nth-col selector (CSS 4)
+:nth-col(2)
+
+# Nth-last-col selector (CSS 4)
+:nth-last-col(2)
+
+# Nth-last-child selector
+:nth-last-child(2)
+
+# Nth-last-of-type selector
+:nth-last-of-type(2)
+
+# Column selector
+:column(selector)
+
+# Fullscreen selector
+:fullscreen
+
+# Picture-in-picture selector
+:picture-in-picture
+
+# Modal selector
+:modal
+
+# Playing selector
+video:playing
+
+# Paused selector
+video:paused
+
+# Seeking selector
+video:seeking
+
+# Buffering selector
+video:buffering
+
+# Stalled selector
+video:stalled
+
+# Muted selector
+video:muted
+
+# Volume-locked selector
+video:volume-locked
+
+# Autoplaying selector
+video:autoplaying
+
+# Looping selector
+video:looping
+
+# Picture-in-picture selector
+video:picture-in-picture
+
+# Controls selector
+video:controls
+
+# No-fullscreen selector
+video:no-fullscreen
+
+# Autoplaying selector
+audio:autoplaying
+
+# Looping selector
+audio:looping
+
+# Muted selector
+audio:muted
+
+# Volume-locked selector
+audio:volume-locked
+
+# Controls selector
+audio:controls
+
+# No-fullscreen selector
+audio:no-fullscreen
+
+# Autoplaying selector
+canvas:autoplaying
+
+# Looping selector
+canvas:looping
+
+# Muted selector
+canvas:muted
+
+# Volume-locked selector
+canvas:volume-locked
+
+# Controls selector
+canvas:controls
+
+# No-fullscreen selector
+canvas:no-fullscreen

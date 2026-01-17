@@ -1,0 +1,352 @@
+# Direct shadow access
+document.querySelector("my-app").shadowRoot.querySelector("#username")
+
+# Nested shadow
+document.querySelector("x-host")
+  .shadowRoot.querySelector("login-panel")
+  .shadowRoot.querySelector("input#email")
+
+# Multiple child layers
+el.shadowRoot.querySelector("child").shadowRoot.querySelector("input")
+
+# Shadow host detection
+element.shadowRoot !== undefined
+
+# Check if element is in shadow DOM
+element.getRootNode() !== document
+
+# Get shadow root
+const shadowRoot = element.attachShadow({ mode: 'open' })
+
+# Access shadow root content
+shadowRoot.querySelector('.inner-element')
+
+# Shadow DOM event handling
+shadowRoot.addEventListener('click', handler)
+
+# CSS in shadow DOM
+shadowRoot.innerHTML = `
+  <style>
+    :host {
+      display: block;
+    }
+    .container {
+      padding: 16px;
+    }
+  </style>
+  <div class="container">
+    <slot></slot>
+  </div>
+`
+
+# Slot content access
+const slot = shadowRoot.querySelector('slot')
+const assignedNodes = slot.assignedNodes()
+
+# Distributed elements
+shadowRoot.querySelector('::slotted(div)')
+
+# CSS ::part() for styling
+custom-element::part(button) {
+  background: blue;
+}
+
+# CSS :host() for host styling
+:host {
+  border: 1px solid black;
+}
+
+# CSS :host-context() for context styling
+:host-context(.dark-theme) {
+  background: #333;
+  color: white;
+}
+
+# Shadow DOM with slots
+shadowRoot.innerHTML = `
+  <div>
+    <slot name="header"></slot>
+    <div class="content">
+      <slot></slot>
+    </div>
+    <slot name="footer"></slot>
+  </div>
+`
+
+# Named slot access
+const headerSlot = shadowRoot.querySelector('slot[name="header"]')
+
+# Default slot access
+const defaultSlot = shadowRoot.querySelector('slot:not([name])')
+
+# Shadow DOM template
+const template = document.createElement('template')
+template.innerHTML = `
+  <style>
+    :host {
+      display: block;
+    }
+  </style>
+  <div class="shadow-content">
+    <slot></slot>
+  </div>
+`
+
+# Custom element with shadow DOM
+class MyComponent extends HTMLElement {
+  constructor() {
+    super()
+    this.attachShadow({ mode: 'open' })
+    this.shadowRoot.appendChild(template.content.cloneNode(true))
+  }
+}
+
+# Shadow DOM querySelectorAll
+const elements = shadowRoot.querySelectorAll('.item')
+
+# Shadow DOM element creation
+const div = document.createElement('div')
+shadowRoot.appendChild(div)
+
+# Shadow DOM text content
+shadowRoot.textContent = 'Hello from shadow'
+
+# Shadow DOM innerHTML
+shadowRoot.innerHTML = '<p>Shadow content</p>'
+
+# Shadow DOM appendChild
+shadowRoot.appendChild(document.createElement('div'))
+
+# Shadow DOM removeChild
+shadowRoot.removeChild(oldElement)
+
+# Shadow DOM replaceChild
+shadowRoot.replaceChild(newElement, oldElement)
+
+# Shadow DOM insertBefore
+shadowRoot.insertBefore(newElement, referenceElement)
+
+# Shadow DOM cloneNode
+const cloned = shadowRoot.cloneNode(true)
+
+# Shadow DOM event dispatching
+shadowRoot.dispatchEvent(new Event('custom-event'))
+
+# Shadow DOM event listening
+shadowRoot.addEventListener('custom-event', handler)
+
+# Shadow DOM custom elements
+customElements.define('my-element', MyElement)
+
+# Shadow DOM style encapsulation
+const style = document.createElement('style')
+style.textContent = `
+  :host {
+    display: block;
+    border: 1px solid #ccc;
+  }
+`
+shadowRoot.appendChild(style)
+
+# Shadow DOM CSS variables
+shadowRoot.style.setProperty('--primary-color', '#007bff')
+
+# Shadow DOM computed style
+const computedStyle = getComputedStyle(shadowRoot.host)
+
+# Shadow DOM element dimensions
+const rect = shadowRoot.getBoundingClientRect()
+
+# Shadow DOM focus management
+shadowRoot.querySelector('input').focus()
+
+# Shadow DOM active element
+const activeElement = shadowRoot.activeElement
+
+# Shadow DOM element from point
+const element = shadowRoot.elementFromPoint(x, y)
+
+# Shadow DOM elements by tag name
+const inputs = shadowRoot.getElementsByTagName('input')
+
+# Shadow DOM elements by class name
+const items = shadowRoot.getElementsByClassName('item')
+
+# Shadow DOM element by ID
+const element = shadowRoot.getElementById('my-id')
+
+# Shadow DOM element by query selector
+const element = shadowRoot.querySelector('.my-class')
+
+# Shadow DOM elements by query selector all
+const elements = shadowRoot.querySelectorAll('.my-class')
+
+# Shadow DOM closest
+const parent = element.closest('.parent-class')
+
+# Shadow DOM matches
+const isMatch = element.matches('.my-class')
+
+# Shadow DOM web components
+const component = document.createElement('my-component')
+document.body.appendChild(component)
+
+# Shadow DOM template instantiation
+const instance = template.content.cloneNode(true)
+shadowRoot.appendChild(instance)
+
+# Shadow DOM slot assignment
+const slot = shadowRoot.querySelector('slot')
+slot.assign([element1, element2])
+
+# Shadow DOM slot change event
+slot.addEventListener('slotchange', handler)
+
+# Shadow DOM CSS @import
+shadowRoot.innerHTML = `
+  <style>
+    @import url('styles.css');
+  </style>
+`
+
+# Shadow DOM CSS @media
+shadowRoot.innerHTML = `
+  <style>
+    @media (max-width: 768px) {
+      :host {
+        font-size: 14px;
+      }
+    }
+  </style>
+`
+
+# Shadow DOM CSS :host() with pseudo-class
+:host(:hover) {
+  background: #f0f0f0;
+}
+
+# Shadow DOM CSS :host() with attribute
+:host([disabled]) {
+  opacity: 0.5;
+}
+
+# Shadow DOM CSS ::slotted() with pseudo-class
+::slotted(:hover) {
+  color: blue;
+}
+
+# Shadow DOM CSS ::part() with pseudo-class
+::part(button):hover {
+  background: #0056b3;
+}
+
+# Shadow DOM CSS custom properties inheritance
+:host {
+  --primary-color: #007bff;
+}
+
+.button {
+  background: var(--primary-color);
+}
+
+# Shadow DOM CSS @keyframes
+shadowRoot.innerHTML = `
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .fade-in {
+      animation: fadeIn 0.3s ease-in;
+    }
+  </style>
+`
+
+# Shadow DOM mutation observer
+const observer = new MutationObserver(mutations => {
+  mutations.forEach(mutation => {
+    console.log('Shadow DOM changed:', mutation)
+  })
+})
+observer.observe(shadowRoot, { childList: true, subtree: true })
+
+# Shadow DOM resize observer
+const resizeObserver = new ResizeObserver(entries => {
+  entries.forEach(entry => {
+    console.log('Shadow DOM resized:', entry)
+  })
+})
+resizeObserver.observe(shadowRoot.host)
+
+# Shadow DOM intersection observer
+const intersectionObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    console.log('Shadow DOM intersected:', entry)
+  })
+})
+intersectionObserver.observe(shadowRoot.host)
+
+# Shadow DOM performance observer
+const performanceObserver = new PerformanceObserver(list => {
+  list.getEntries().forEach(entry => {
+    console.log('Shadow DOM performance:', entry)
+  })
+})
+performanceObserver.observe({ entryTypes: ['measure'] })
+
+# Shadow DOM form validation
+const form = shadowRoot.querySelector('form')
+if (form.checkValidity()) {
+  form.submit()
+}
+
+# Shadow DOM form data
+const formData = new FormData(shadowRoot.querySelector('form'))
+
+# Shadow DOM file handling
+const fileInput = shadowRoot.querySelector('input[type="file"]')
+const file = fileInput.files[0]
+
+# Shadow DOM canvas
+const canvas = shadowRoot.querySelector('canvas')
+const ctx = canvas.getContext('2d')
+
+# Shadow DOM video
+const video = shadowRoot.querySelector('video')
+video.play()
+
+# Shadow DOM audio
+const audio = shadowRoot.querySelector('audio')
+audio.play()
+
+# Shadow DOM iframe
+const iframe = shadowRoot.querySelector('iframe')
+const iframeDoc = iframe.contentDocument
+
+# Shadow DOM web workers
+const worker = new Worker('worker.js')
+worker.postMessage({ data: 'from shadow DOM' })
+
+# Shadow DOM web sockets
+const socket = new WebSocket('ws://localhost:8080')
+socket.send('message from shadow DOM')
+
+# Shadow DOM fetch API
+fetch('/api/data')
+  .then(response => response.json())
+  .then(data => {
+    console.log('Data in shadow DOM:', data)
+  })
+
+# Shadow DOM local storage
+localStorage.setItem('shadow-data', JSON.stringify(data))
+
+# Shadow DOM session storage
+sessionStorage.setItem('shadow-session', JSON.stringify(data))
+
+# Shadow DOM indexed DB
+const request = indexedDB.open('shadow-db', 1)
+request.onsuccess = event => {
+  const db = event.target.result
+  // Use database in shadow DOM context
+}

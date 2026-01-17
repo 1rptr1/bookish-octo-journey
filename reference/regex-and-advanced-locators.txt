@@ -1,0 +1,779 @@
+# Match dynamic ID
+//*[matches(@id,'user-[0-9]+')]
+
+# Match 2 possible labels
+//label[matches(.,'Email|E-mail')]/following::input
+
+# Match UUID patterns
+//*[matches(@id,'[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}')]
+
+# Match timestamp patterns
+//*[matches(@id,'element-[0-9]{10}')]
+
+# Match random strings
+//*[matches(@id,'element-[a-zA-Z0-9]{8}')]
+
+# Match email patterns
+//*[matches(text(),'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}')]
+
+# Match phone patterns
+//*[matches(text(),'\\+?1?-?\\.?\\s?\\(?\\d{3}\\)?\\s?\\d{3}[-.]?\\d{4}')]
+
+# Match URL patterns
+//*[matches(@href,'https?://[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}/.*')]
+
+# Match date patterns
+//*[matches(text(),'\\d{1,2}[/-]\\d{1,2}[/-]\\d{2,4}')]
+
+# Match time patterns
+//*[matches(text(),'\\d{1,2}:\\d{2}(?:am|pm)?')]
+
+# Match currency patterns
+//*[matches(text(),'\\$\\d+(?:\\.\\d{2})?')]
+
+# Match percentage patterns
+//*[matches(text(),'\\d+(?:\\.\\d+)?%')]
+
+# Match number patterns
+//*[matches(text(),'\\d+(?:\\.\\d+)?')]
+
+# Match decimal patterns
+//*[matches(text(),'\\d+\\.\\d+')]
+
+# Match integer patterns
+//*[matches(text(),'\\d+')]
+
+# Match alphanumeric patterns
+//*[matches(text(),'[a-zA-Z0-9]+')]
+
+# Match uppercase patterns
+//*[matches(text(),'[A-Z]+')]
+
+# Match lowercase patterns
+//*[matches(text(),'[a-z]+')]
+
+# Match word patterns
+//*[matches(text(),'\\b\\w+\\b')]
+
+# Match whitespace patterns
+//*[matches(text(),'\\s+')]
+
+# Match non-whitespace patterns
+//*[matches(text(),'\\S+')]
+
+# Match digit patterns
+//*[matches(text(),'\\d+')]
+
+# Match non-digit patterns
+//*[matches(text(),'\\D+')]
+
+# Match word character patterns
+//*[matches(text(),'\\w+')]
+
+# Match non-word character patterns
+//*[matches(text(),'\\W+')]
+
+# Match boundary patterns
+//*[matches(text(),'\\bword\\b')]
+
+# Match start of string
+//*[matches(text(),'^Start')]
+
+# Match end of string
+//*[matches(text(),'End$')]
+
+# Match any character
+//*[matches(text,'.')]
+
+# Match specific character count
+//*[matches(text,'.{5}')]
+
+# Match character range
+//*[matches(text,'a{3,5}')]
+
+# Match zero or more
+//*[matches(text,'a*')]
+
+# Match one or more
+//*[matches(text,'a+')]
+
+# Match zero or one
+//*[matches(text,'a?')]
+
+# Match exact count
+//*[matches(text,'a{3}')]
+
+# Match range count
+//*[matches(text,'a{3,5}')]
+
+# Match minimum count
+//*[matches(text,'a{3,}')]
+
+# Match character class
+//*[matches(text,'[abc]')]
+
+# Match negated character class
+//*[matches(text,'[^abc]')]
+
+# Match range character class
+//*[matches(text,'[a-z]')]
+
+# Match digit character class
+//*[matches(text,'[0-9]')]
+
+# Match word character class
+//*[matches(text,'[a-zA-Z0-9_]')]
+
+# Match whitespace character class
+//*[matches(text,'[ \\t\\n\\r\\f\\v]')]
+
+# Match grouping
+//*[matches(text,'(ab)+')]
+
+# Match alternation
+//*[matches(text,'a|b')]
+
+# Match lookahead
+//*[matches(text,'a(?=b)')]
+
+# Match negative lookahead
+//*[matches(text,'a(?!b)')]
+
+# Match lookbehind
+//*[matches(text,'(?<=a)b')]
+
+# Match negative lookbehind
+//*[matches(text,'(?<!a)b')]
+
+# Match non-capturing group
+//*[matches(text,'(?:ab)+')]
+
+# Match named group
+//*[matches(text,'(?<name>ab)')]
+
+# Match atomic group
+//*[matches(text,'(?>ab)+')]
+
+# Match conditional
+//*[matches(text,'(?(condition)then|else)')]
+
+# Match recursive
+//*[matches(text,'(?R)')]
+
+# Match backreference
+//*[matches(text,'(\\w+)\\s+\\1')]
+
+# Match octal escape
+//*[matches(text,'\\101')]
+
+# Match hex escape
+//*[matches(text,'\\x41')]
+
+# Match unicode escape
+//*[matches(text,'\\u0041')]
+
+# Match control character
+//*[matches(text,'\\cA')]
+
+# Match bell character
+//*[matches(text,'\\a')]
+
+# Match escape character
+//*[matches(text,'\\e')]
+
+# Match form feed
+//*[matches(text,'\\f')]
+
+# Match line feed
+//*[matches(text,'\\n')]
+
+# Match carriage return
+//*[matches(text,'\\r')]
+
+# Match horizontal tab
+//*[matches(text,'\\t')]
+
+# Match vertical tab
+//*[matches(text,'\\v')]
+
+# Match backspace
+//*[matches(text,'[\\b]')]
+
+# Match null character
+//*[matches(text,'\\0')]
+
+# Match word boundary
+//*[matches(text,'\\b')]
+
+# Match non-word boundary
+//*[matches(text,'\\B')]
+
+# Match digit
+//*[matches(text,'\\d')]
+
+# Match non-digit
+//*[matches(text,'\\D')]
+
+# Match whitespace
+//*[matches(text,'\\s')]
+
+# Match non-whitespace
+//*[matches(text,'\\S')]
+
+# Match word character
+//*[matches(text,'\\w')]
+
+# Match non-word character
+//*[matches(text,'\\W')]
+
+# Match POSIX character class
+//*[matches(text,'[[:alpha:]]')]
+
+# Match POSIX alphanumeric
+//*[matches(text,'[[:alnum:]]')]
+
+# Match POSIX blank
+//*[matches(text,'[[:blank:]]')]
+
+# Match POSIX control
+//*[matches(text,'[[:cntrl:]]')]
+
+# Match POSIX digit
+//*[matches(text,'[[:digit:]]')]
+
+# Match POSIX graph
+//*[matches(text,'[[:graph:]]')]
+
+# Match POSIX lower
+//*[matches(text,'[[:lower:]]')]
+
+# Match POSIX print
+//*[matches(text,'[[:print:]]')]
+
+# Match POSIX punct
+//*[matches(text,'[[:punct:]]')]
+
+# Match POSIX space
+//*[matches(text,'[[:space:]]')]
+
+# Match POSIX upper
+//*[matches(text,'[[:upper:]]')]
+
+# Match POSIX word
+//*[matches(text,'[[:word:]]')]
+
+# Match POSIX xdigit
+//*[matches(text,'[[:xdigit:]]')]
+
+# Match Unicode category
+//*[matches(text,'\\p{L}')]
+
+# Match Unicode letter
+//*[matches(text,'\\p{Letter}')]
+
+# Match Unicode uppercase
+//*[matches(text,'\\p{Lu}')]
+
+# Match Unicode lowercase
+//*[matches(text,'\\p{Ll}')]
+
+# Match Unicode titlecase
+//*[matches(text,'\\p{Lt}')]
+
+# Match Unicode modifier
+//*[matches(text,'\\p{Lm}')]
+
+# Match Unicode other letter
+//*[matches(text,'\\p{Lo}')]
+
+# Match Unicode mark
+//*[matches(text,'\\p{M}')]
+
+# Match Unicode nonspacing mark
+//*[matches(text,'\\p{Mn}')]
+
+# Match Unicode spacing combining mark
+//*[matches(text,'\\p{Mc}')]
+
+# Match Unicode enclosing mark
+//*[matches(text,'\\p{Me}')]
+
+# Match Unicode number
+//*[matches(text,'\\p{N}')]
+
+# Match Unicode decimal digit
+//*[matches(text,'\\p{Nd}')]
+
+# Match Unicode letter number
+//*[matches(text,'\\p{Nl}')]
+
+# Match Unicode other number
+//*[matches(text,'\\p{No}')]
+
+# Match Unicode punctuation
+//*[matches(text,'\\p{P}')]
+
+# Match Unicode connector punctuation
+//*[matches(text,'\\p{Pc}')]
+
+# Match Unicode dash punctuation
+//*[matches(text,'\\p{Pd}')]
+
+# Match Unicode open punctuation
+//*[matches(text,'\\p{Ps}')]
+
+# Match Unicode close punctuation
+//*[matches(text,'\\p{Pe}')]
+
+# Match Unicode initial punctuation
+//*[matches(text,'\\p{Pi}')]
+
+# Match Unicode final punctuation
+//*[matches(text,'\\p{Pf}')]
+
+# Match Unicode other punctuation
+//*[matches(text,'\\p{Po}')]
+
+# Match Unicode symbol
+//*[matches(text,'\\p{S}')]
+
+# Match Unicode math symbol
+//*[matches(text,'\\p{Sm}')]
+
+# Match Unicode currency symbol
+//*[matches(text,'\\p{Sc}')]
+
+# Match Unicode modifier symbol
+//*[matches(text,'\\p{Sk}')]
+
+# Match Unicode other symbol
+//*[matches(text,'\\p{So}')]
+
+# Match Unicode separator
+//*[matches(text,'\\p{Z}')]
+
+# Match Unicode space separator
+//*[matches(text,'\\p{Zs}')]
+
+# Match Unicode line separator
+//*[matches(text,'\\p{Zl}')]
+
+# Match Unicode paragraph separator
+//*[matches(text,'\\p{Zp}')]
+
+# Match Unicode other
+//*[matches(text,'\\p{C}')]
+
+# Match Unicode control
+//*[matches(text,'\\p{Cc}')]
+
+# Match Unicode format
+//*[matches(text,'\\p{Cf}')]
+
+# Match Unicode surrogate
+//*[matches(text,'\\p{Cs}')]
+
+# Match Unicode private use
+//*[matches(text,'\\p{Co}')]
+
+# Match Unicode unassigned
+//*[matches(text,'\\p{Cn}')]
+
+# Match Unicode script
+//*[matches(text,'\\p{Latin}')]
+
+# Match Unicode block
+//*[matches(text,'\\p{InBasicLatin}')]
+
+# Match Unicode age
+//*[matches(text,'\\p{Age=1.1}')]
+
+# Match Unicode property
+//*[matches(text,'\\p{Script=Latin}')]
+
+# Match Unicode binary property
+//*[matches(text,'\\p{Alphabetic}')]
+
+# Match Unicode enumerated property
+//*[matches(text,'\\p{General_Category=Letter}')]
+
+# Match Unicode numeric value
+//*[matches(text,'\\p{Numeric_Value=1}')]
+
+# Match Unicode name
+//*[matches(text,'\\p{Name=LATIN SMALL LETTER A}')]
+
+# Match Unicode alias
+//*[matches(text,'\\p{Alpha}')]
+
+# Match Unicode block
+//*[matches(text,'\\p{Block=BasicLatin}')]
+
+# Match Unicode script
+//*[matches(text,'\\p{Script=Latin}')]
+
+# Match Unicode category
+//*[matches(text,'\\p{Category=Letter}')]
+
+# Match Unicode combining class
+//*[matches(text,'\\p{Combining_Class=230}')]
+
+# Match Unicode decomposition
+//*[matches(text,'\\p{Decomposition_Type=Canonical}')]
+
+# Match Unicode numeric type
+//*[matches(text,'\\p{Numeric_Type=Decimal}')]
+
+# Match Unicode bidirectional class
+//*[matches(text,'\\p{Bidi_Class=L}')]
+
+# Match Unicode mirror
+//*[matches(text,'\\p{Mirror=Y}')]
+
+# Match Unicode join control
+//*[matches(text,'\\p{Join_Control=Y}')]
+
+# Match Unicode composition
+//*[matches(text,'\\p{Composition_Exclusion=Y}')]
+
+# Match Unicode full composition
+//*[matches(text,'\\p{Full_Composition_Exclusion=Y}')]
+
+# Match Unicode nfc quick check
+//*[matches(text,'\\p{NFC_Quick_Check=Yes}')]
+
+# Match Unicode nfd quick check
+//*[matches(text,'\\p{NFD_Quick_Check=Yes}')]
+
+# Match Unicode nfkc quick check
+//*[matches(text,'\\p{NFKC_Quick_Check=Yes}')]
+
+# Match Unicode nfkd quick check
+//*[matches(text,'\\p{NFKD_Quick_Check=Yes}')]
+
+# Match Unicode lead canonical
+//*[matches(text,'\\p{Lead_Canonical_Combining_Class=0}')]
+
+# Match Unicode trail canonical
+//*[matches(text,'\\p{Trail_Canonical_Combining_Class=0}')]
+
+# Match Unicode grapheme cluster break
+//*[matches(text,'\\p{Grapheme_Cluster_Break=Other}')]
+
+# Match Unicode sentence break
+//*[matches(text,'\\p{Sentence_Break=Other}')]
+
+# Match Unicode word break
+//*[matches(text,'\\p{Word_Break=Other}')]
+
+# Match Unicode line break
+//*[matches(text,'\\p{Line_Break=Alphabetic}')]
+
+# Match Unicode east asian width
+//*[matches(text,'\\p{East_Asian_Width=Neutral}')]
+
+# Match Unicode hangul syllable type
+//*[matches(text,'\\p{Hangul_Syllable_Type=Not_Applicable}')]
+
+# Match Unicode jamo short name
+//*[matches(text,'\\p{Jamo_Short_Name=Not_Applicable}')]
+
+# Match Unicode indicator
+//*[matches(text,'\\p{Indic_Positional_Category=NA}')]
+
+# Match Unicode indicic syllabic
+//*[matches(text,'\\p{Indic_Syllabic_Category=Other}')]
+
+# Match Unicode vertical orientation
+//*[matches(text,'\\p{Vertical_Orientation=R}')]
+
+# Match Unicode unified ideograph
+//*[matches(text,'\\p{Unified_Ideograph=No}')]
+
+# Match Unicode radical
+//*[matches(text,'\\p{Radical=No}')]
+
+# Match Unicode canonical combining
+//*[matches(text,'\\p{Canonical_Combining_Class=0}')]
+
+# Match Unicode decomposition mapping
+//*[matches(text,'\\p{Decomposition_Mapping=No}')]
+
+# Match Unicode numeric digit
+//*[matches(text,'\\p{Numeric_Digit=No}')]
+
+# Match Unicode numeric decimal
+//*[matches(text,'\\p{Numeric_Decimal=No}')]
+
+# Match Unicode numeric numerator
+//*[matches(text,'\\p{Numeric_Numerator=No}')]
+
+# Match Unicode numeric denominator
+//*[matches(text,'\\p{Numeric_Denominator=No}')]
+
+# Match Unicode numeric value
+//*[matches(text,'\\p{Numeric_Value=NaN}')]
+
+# Match Unicode age version
+//*[matches(text,'\\p{Age=V1_1}')]
+
+# Match Unicode block name
+//*[matches(text,'\\p{Block=Basic_Latin}')]
+
+# Match Unicode script name
+//*[matches(text,'\\p{Script=Latin}')]
+
+# Match Unicode category name
+//*[matches(text,'\\p{General_Category=Uppercase_Letter}')]
+
+# Match Unicode property name
+//*[matches(text,'\\p{Alphabetic=Yes}')]
+
+# Match Unicode boolean property
+//*[matches(text,'\\p{White_Space=Yes}')]
+
+# Match Unicode catalog property
+//*[matches(text,'\\p{Catalog=Yes}')]
+
+# Match Unicode miscellaneous property
+//*[matches(text,'\\p{Other=Yes}')]
+
+# Match Unicode identifier property
+//*[matches(text,'\\p{ID_Start=Yes}')]
+
+# Match Unicode identifier continue
+//*[matches(text,'\\p{ID_Continue=Yes}')]
+
+# Match Unicode xid start
+//*[matches(text,'\\p{XID_Start=Yes}')]
+
+# Match Unicode xid continue
+//*[matches(text,'\\p{XID_Continue=Yes}')]
+
+# Match Unicode pattern syntax
+//*[matches(text,'\\p{Pattern_Syntax=Yes}')]
+
+# Match Unicode pattern white space
+//*[matches(text,'\\p{Pattern_White_Space=Yes}')]
+
+# Match Unicode default ignorable
+//*[matches(text,'\\p{Default_Ignorable_Code_Point=Yes}')]
+
+# Match Unicode deprecated
+//*[matches(text,'\\p{Deprecated=Yes}')]
+
+# Match Unicode logical order exception
+//*[matches(text,'\\p{Logical_Order_Exception=Yes}')]
+
+# Match Unicode noncharacter code point
+//*[matches(text,'\\p{Noncharacter_Code_Point=Yes}')]
+
+# Match Unicode variation selector
+//*[matches(text,'\\p{Variation_Selector=Yes}')]
+
+# Match Unicode emoji
+//*[matches(text,'\\p{Emoji=Yes}')]
+
+# Match Unicode emoji presentation
+//*[matches(text,'\\p{Emoji_Presentation=Yes}')]
+
+# Match Unicode emoji modifier
+//*[matches(text,'\\p{Emoji_Modifier=Yes}')]
+
+# Match Unicode emoji modifier base
+//*[matches(text,'\\p{Emoji_Modifier_Base=Yes}')]
+
+# Match Unicode emoji component
+//*[matches(text,'\\p{Emoji_Component=Yes}')]
+
+# Match Unicode extended pictographic
+//*[matches(text,'\\p{Extended_Pictographic=Yes}')]
+
+# Match Unicode emoji keycap
+//*[matches(text,'\\p{Emoji_Keycap_Sequence=Yes}')]
+
+# Match Unicode rgi emoji
+//*[matches(text,'\\p{RGI_Emoji=Yes}')]
+
+# Match Unicode rgi emoji flag
+//*[matches(text,'\\p{RGI_Emoji_Flag_Sequence=Yes}')]
+
+# Match Unicode rgi emoji tag
+//*[matches(text,'\\p{RGI_Emoji_Tag_Sequence=Yes}')]
+
+# Match Unicode rgi emoji zwj
+//*[matches(text,'\\p{RGI_Emoji_ZWJ_Sequence=Yes}')]
+
+# Match Unicode identifier status
+//*[matches(text,'\\p{Identifier_Status=Allowed}')]
+
+# Match Unicode identifier type
+//*[matches(text,'\\p{Identifier_Type=Aspirational}')]
+
+# Match Unicode ascii hex digit
+//*[matches(text,'\\p{ASCII_Hex_Digit=Yes}')]
+
+# Match Unicode bidi control
+//*[matches(text,'\\p{Bidi_Control=Yes}')]
+
+# Match Unicode dash
+//*[matches(text,'\\p{Dash=Yes}')]
+
+# Match Unicode deprecated
+//*[matches(text,'\\p{Deprecated=Yes}')]
+
+# Match Unicode diacritic
+//*[matches(text,'\\p{Diacritic=Yes}')]
+
+# Match Unicode extender
+//*[matches(text,'\\p{Extender=Yes}')]
+
+# Match Unicode hex digit
+//*[matches(text,'\\p{Hex_Digit=Yes}')]
+
+# Match Unicode hyphen
+//*[matches(text,'\\p{Hyphen=Yes}')]
+
+# Match Unicode id continue
+//*[matches(text,'\\p{ID_Continue=Yes}')]
+
+# Match Unicode id start
+//*[matches(text,'\\p{ID_Start=Yes}')]
+
+# Match Unicode ideographic
+//*[matches(text,'\\p{Ideographic=Yes}')]
+
+# Match Unicode ids binary operator
+//*[matches(text,'\\p{IDS_Binary_Operator=Yes}')]
+
+# Match Unicode ids trinary operator
+//*[matches(text,'\\p{IDS_Trinary_Operator=Yes}')]
+
+# Match Unicode join control
+//*[matches(text,'\\p{Join_Control=Yes}')]
+
+# Match Unicode logical order exception
+//*[matches(text,'\\p{Logical_Order_Exception=Yes}')]
+
+# Match Unicode lowercase
+//*[matches(text,'\\p{Lowercase=Yes}')]
+
+# Match Unicode math
+//*[matches(text,'\\p{Math=Yes}')]
+
+# Match Unicode noncharacter code point
+//*[matches(text,'\\p{Noncharacter_Code_Point=Yes}')]
+
+# Match Unicode other alphabetic
+//*[matches(text,'\\p{Other_Alphabetic=Yes}')]
+
+# Match Unicode other default ignorable
+//*[matches(text,'\\p{Other_Default_Ignorable_Code_Point=Yes}')]
+
+# Match Unicode other grapheme extend
+//*[matches(text,'\\p{Other_Grapheme_Extend=Yes}')]
+
+# Match Unicode other id continue
+//*[matches(text,'\\p{Other_ID_Continue=Yes}')]
+
+# Match Unicode other id start
+//*[matches(text,'\\p{Other_ID_Start=Yes}')]
+
+# Match Unicode other lowercase
+//*[matches(text,'\\p{Other_Lowercase=Yes}')]
+
+# Match Unicode other math
+//*[matches(text,'\\p{Other_Math=Yes}')]
+
+# Match Unicode other uppercase
+//*[matches(text,'\\p{Other_Uppercase=Yes}')]
+
+# Match Unicode pattern syntax
+//*[matches(text,'\\p{Pattern_Syntax=Yes}')]
+
+# Match Unicode pattern white space
+//*[matches(text,'\\p{Pattern_White_Space=Yes}')]
+
+# Match Unicode quotation mark
+//*[matches(text,'\\p{Quotation_Mark=Yes}')]
+
+# Match Unicode radical
+//*[matches(text,'\\p{Radical=Yes}')]
+
+# Match Unicode sentence terminal
+//*[matches(text,'\\p{Sentence_Terminal=Yes}')]
+
+# Match Unicode soft dotted
+//*[matches(text,'\\p{Soft_Dotted=Yes}')]
+
+# Match Unicode terminal punctuation
+//*[matches(text,'\\p{Terminal_Punctuation=Yes}')]
+
+# Match Unicode unified ideograph
+//*[matches(text,'\\p{Unified_Ideograph=Yes}')]
+
+# Match Unicode uppercase
+//*[matches(text,'\\p{Uppercase=Yes}')]
+
+# Match Unicode variation selector
+//*[matches(text,'\\p{Variation_Selector=Yes}')]
+
+# Match Unicode white space
+//*[matches(text,'\\p{White_Space=Yes}')]
+
+# Match Unicode xid continue
+//*[matches(text,'\\p{XID_Continue=Yes}')]
+
+# Match Unicode xid start
+//*[matches(text,'\\p{XID_Start=Yes}')]
+
+# Match Unicode space
+//*[matches(text,'\\p{Space=Yes}')]
+
+# Match Unicode newline
+//*[matches(text,'\\p{Newline=Yes}')]
+
+# Match Unicode blank
+//*[matches(text,'\\p{Blank=Yes}')]
+
+# Match Unicode graph
+//*[matches(text,'\\p{Graph=Yes}')]
+
+# Match Unicode print
+//*[matches(text,'\\p{Print=Yes}')]
+
+# Match Unicode cntrl
+//*[matches(text,'\\p{Cntrl=Yes}')]
+
+# Match Unicode punct
+//*[matches(text,'\\p{Punct=Yes}')]
+
+# Match Unicode alnum
+//*[matches(text,'\\p{Alnum=Yes}')]
+
+# Match Unicode alpha
+//*[matches(text,'\\p{Alpha=Yes}')]
+
+# Match Unicode digit
+//*[matches(text,'\\p{Digit=Yes}')]
+
+# Match Unicode lower
+//*[matches(text,'\\p{Lower=Yes}')]
+
+# Match Unicode upper
+//*[matches(text,'\\p{Upper=Yes}')]
+
+# Match Unicode xdigit
+//*[matches(text,'\\p{XDigit=Yes}')]
+
+# Match Unicode word
+//*[matches(text,'\\p{Word=Yes}')]
+
+# Match Unicode ascii
+//*[matches(text,'\\p{ASCII=Yes}')]
+
+# Match Unicode assigned
+//*[matches(text,'\\p{Assigned=Yes}')]
+
+# Match Unicode unassigned
+//*[matches(text,'\\p{Unassigned=Yes}')]

@@ -11,16 +11,42 @@ import { injectOverlay } from './ui/injectOverlay.js';
 import { captureSelection } from './ui/captureSelection.js';
 import { callLocalLLM } from './llm/localLlmClient.js';
 import { buildTestCasePrompt } from './llm/promptBuilder.js';
+import { buildFilteredLocators } from './src/qa/generateFilteredLocators.js';
 import yaml from 'js-yaml';
+import fs from 'fs';
+import path from 'path';
+
+// Load HTML reference for standalone demo
+const referenceHTML = fs.readFileSync(
+  path.join(process.cwd(), "reference/html/reference-playground.html"),
+  "utf8"
+);
 
 const url = process.argv[2];
-if (!url) {
+const demoMode = !url || process.argv.includes('--demo');
+
+if (!url && !demoMode) {
   console.error('Usage: node index.js <url>');
+  console.error('       node index.js --demo  (run with HTML reference playground)');
   process.exit(1);
 }
 
 const qaMode = process.argv.includes('--qa');
 const llmMode = process.argv.includes('--llm');
+
+// Handle demo mode
+if (demoMode) {
+  console.log('🧪 Running in demo mode with HTML reference playground...');
+  console.log('✅ HTML reference loaded:', referenceHTML.length, 'characters');
+  console.log('📝 Reference contains forms, tables, dynamic elements, shadow DOM, and interactive elements');
+  
+  console.log('\n🔧 To use the reference playground:');
+  console.log('1. Open reference/html/reference-playground.html in your browser');
+  console.log('2. Use the CLI with: node index.js <url-to-your-test-page>');
+  console.log('3. Or run with QA mode: node index.js <url> --qa');
+  process.exit(0);
+}
+
 const { browser, page } = await loadPage(url, { headless: !qaMode });
 
 try {
@@ -37,11 +63,18 @@ try {
     const scopedTestCases = generateScopedTestCases(scopedSignals);
     console.log('Scoped Test Cases:', JSON.stringify(scopedTestCases, null, 2));
 
-    const scopedLocators = generateScopedLocators(selection.elements || []);
-    const filteredLocators = filterLocatorsByFields(
-      scopedLocators,
-      scopedSignals.fields
-    );
+    // Use NEW locator engine - get the actual selected element by CSS selector
+    const filteredLocators = await page.evaluate((cssSelector) => {
+      // Find the actual selected element using the CSS selector
+      const selectedElement = document.querySelector(cssSelector);
+      if (!selectedElement) return [];
+      
+      // Use the new locator engine on the selected element only
+      return window.__buildFilteredLocators ? 
+        window.__buildFilteredLocators(selectedElement) : 
+        [];
+    }, selection.css);
+    
     console.log('Filtered Locators:', filteredLocators);
   } else {
     const signals = await extractSignals(page);

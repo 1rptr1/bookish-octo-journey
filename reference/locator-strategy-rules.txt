@@ -1,0 +1,299 @@
+# Prefer ID selector if exists
+1. ID → always highest confidence
+
+# Prefer label-proximity XPath if no ID
+2. //label[text()='X']/following::input[1]
+
+# Prefer data-test over class
+3. [data-test='value']
+
+# Shadow DOM rules
+4. If element is inside shadowRoot → use JS chain
+
+# XPath axes rule
+5. If parent/ancestor can identify → use ancestor::* or parent::*
+
+# CSS specificity hierarchy
+6. ID > Class > Tag > Attribute > Pseudo-class
+
+# Dynamic ID handling
+7. If ID contains random parts → use contains() or starts-with()
+
+# Multiple elements
+8. If multiple matches → use index or more specific selector
+
+# Form elements
+9. For forms → prefer label-based locators
+
+# Tables
+10. For tables → use text-based cell locators
+
+# Lists
+11. For lists → use nth-child or text content
+
+# Buttons
+12. For buttons → prefer text or aria-label
+
+# Links
+13. For links → use text content or href attribute
+
+# Images
+14. For images → use alt text or src attribute
+
+# Inputs
+15. For inputs → use name, placeholder, or associated label
+
+# Select dropdowns
+16. For selects → use name or associated label
+
+# Checkboxes/Radio
+17. For checkboxes/radio → use label or value attribute
+
+# Error messages
+18. For errors → use class or text content
+
+# Success messages
+19. For success → use class or text content
+
+# Loading states
+20. For loading → use class or text content
+
+# Modal dialogs
+21. For modals → use role or title attribute
+
+# Tooltips
+22. For tooltips → use aria-label or text content
+
+# Navigation menus
+23. For navigation → use text or href attributes
+
+# Breadcrumbs
+24. For breadcrumbs → use text content
+
+# Tabs
+25. For tabs → use text or aria-selected attribute
+
+# Accordions
+26. For accordions → use text or aria-expanded attribute
+
+# Carousels
+27. For carousels → use class or data attributes
+
+# Pagination
+28. For pagination → use text or aria-label
+
+# Search results
+29. For search results → use text content
+
+# Filters
+30. For filters → use label or value attributes
+
+# Sort controls
+31. For sort → use label or selected option
+
+# Date pickers
+32. For date pickers → use placeholder or label
+
+# Time pickers
+33. For time pickers → use placeholder or label
+
+# Color pickers
+34. For color pickers → use class or data attributes
+
+# File uploads
+35. For file uploads → use label or accept attribute
+
+# Rich text editors
+36. For rich text → use class or contenteditable
+
+# Code editors
+37. For code editors → use class or data attributes
+
+# Tree views
+38. For tree views → use text or aria-level
+
+# Data grids
+39. For data grids → use text or row index
+
+# Charts
+40. For charts → use class or data attributes
+
+# Maps
+41. For maps → use class or data attributes
+
+# Video players
+42. For video → use class or controls attribute
+
+# Audio players
+43. For audio → use class or controls attribute
+
+# Image galleries
+44. For galleries → use class or data attributes
+
+# Lightboxes
+45. For lightboxes → use class or role attribute
+
+# Progress bars
+46. For progress → use class or aria-valuenow
+
+# Status indicators
+47. For status → use class or aria-label
+
+# Badges
+48. For badges → use class or text content
+
+# Avatars
+49. For avatars → use class or alt attribute
+
+# User profiles
+50. For profiles → use class or data attributes
+
+# Comments
+51. For comments → use class or text content
+
+# Replies
+52. For replies → use class or text content
+
+# Social buttons
+53. For social → use class or aria-label
+
+# Share buttons
+54. For share → use class or aria-label
+
+# Print buttons
+55. For print → use class or aria-label
+
+# Download buttons
+56. For download → use class or href attribute
+
+# Upload areas
+57. For upload → use class or dropzone attribute
+
+# Drag and drop
+58. For D&D → use class or draggable attribute
+
+# Loading spinners
+59. For spinners → use class or aria-label
+
+# Skeleton loaders
+60. For skeleton → use class or aria-label
+
+# Empty states
+61. For empty → use class or text content
+
+# Error pages
+62. For error pages → use class or status code
+
+# Maintenance pages
+63. For maintenance → use class or text content
+
+# Login forms
+64. For login → use form action or labels
+
+# Registration forms
+65. For register → use form action or labels
+
+# Contact forms
+66. For contact → use form action or labels
+
+# Search forms
+67. For search → use form action or placeholder
+
+# Filter forms
+68. For filter → use form action or labels
+
+# Sort forms
+69. For sort → use form action or selected option
+
+# Pagination forms
+70. For pagination → use form action or page number
+
+# Multi-step forms
+71. For multi-step → use step indicators or labels
+
+# Wizard forms
+72. For wizard → use step indicators or labels
+
+# Survey forms
+73. For survey → use form action or question text
+
+# Feedback forms
+74. For feedback → use form action or labels
+
+# Newsletter forms
+75. For newsletter → use form action or labels
+
+# Subscription forms
+76. For subscription → use form action or labels
+
+# Checkout forms
+77. For checkout → use form action or labels
+
+# Payment forms
+78. For payment → use form action or labels
+
+# Shipping forms
+79. For shipping → use form action or labels
+
+# Billing forms
+80. For billing → use form action or labels
+
+# Profile forms
+81. For profile → use form action or labels
+
+# Settings forms
+82. For settings → use form action or labels
+
+# Preference forms
+83. For preference → use form action or labels
+
+# Configuration forms
+84. For configuration → use form action or labels
+
+# Admin forms
+85. For admin → use form action or labels
+
+# User management forms
+86. For user management → use form action or labels
+
+# Role management forms
+87. For role management → use form action or labels
+
+# Permission forms
+88. For permission → use form action or labels
+
+# Security forms
+89. For security → use form action or labels
+
+# Privacy forms
+90. For privacy → use form action or labels
+
+# Terms forms
+91. For terms → use form action or labels
+
+# Policy forms
+92. For policy → use form action or labels
+
+# Agreement forms
+93. For agreement → use form action or labels
+
+# Consent forms
+94. For consent → use form action or labels
+
+# Confirmation forms
+95. For confirmation → use form action or labels
+
+# Verification forms
+96. For verification → use form action or labels
+
+# Authentication forms
+97. For authentication → use form action or labels
+
+# Authorization forms
+98. For authorization → use form action or labels
+
+# Two-factor forms
+99. For 2FA → use form action or labels
+
+# Recovery forms
+100. For recovery → use form action or labels

@@ -1,0 +1,79 @@
+# CSS Failsafe Reference Guide
+
+## Basic Locators
+- ID: `#element-id`
+- Class: `.class-name`
+- Tag: `tagname`
+- Attribute: `[attribute='value']`
+- Multiple classes: `.class1.class2`
+
+## Combinators
+- Descendant: `parent child`
+- Child: `parent > child`
+- Adjacent sibling: `element + sibling`
+- General sibling: `element ~ sibling`
+
+## Attribute Selectors
+- Exact: `[attribute='value']`
+- Contains: `[attribute*='value']`
+- Starts with: `[attribute^='value']`
+- Ends with: `[attribute$='value']`
+- Contains word: `[attribute~='value']`
+- Contains prefix: `[attribute|='value']`
+
+## Pseudo-classes
+- First child: `:first-child`
+- Last child: `:last-child`
+- Nth child: `:nth-child(n)`
+- Nth of type: `:nth-of-type(n)`
+- Not: `:not(selector)`
+- Empty: `:empty`
+- Enabled: `:enabled`
+- Disabled: `:disabled`
+- Checked: `:checked`
+
+## Form Elements
+- Input by type: `input[type='text']`
+- Input by name: `input[name='username']`
+- Input by placeholder: `input[placeholder='Enter text']`
+- Button by type: `button[type='submit']`
+- Select by name: `select[name='options']`
+
+## Text-based Selectors
+- Exact text (limited): No direct CSS support, use XPath
+- Partial text (limited): No direct CSS support, use XPath
+
+## Structural Selectors
+- Root: `:root`
+- Only child: `:only-child`
+- Only of type: `:only-of-type`
+- First of type: `:first-of-type`
+- Last of type: `:last-of-type`
+
+## State Selectors
+- Hover: `:hover`
+- Focus: `:focus`
+- Active: `:active`
+- Visited: `:visited`
+- Link: `:link`
+
+## Shadow DOM
+- Shadow host: `css:host`
+- Shadow content: Use ::part() for styled parts
+- CSS custom properties: `var(--custom-property)`
+
+## Error Handling
+- Use multiple selectors as fallbacks
+- Combine attributes for specificity
+- Use pseudo-classes for dynamic content
+- Test selectors in browser dev tools
+
+## Best Practices
+1. Prefer ID selectors for unique elements
+2. Use class selectors for reusable components
+3. Combine selectors for specificity
+4. Avoid overly complex selectors
+5. Use semantic HTML5 tags when possible
+6. Consider performance of complex selectors
+7. Use attribute selectors for dynamic attributes
+8. Test selectors across different browsers

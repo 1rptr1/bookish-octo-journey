@@ -1,3 +1,26 @@
+import fs from "fs";
+import path from "path";
+import url from "url";
+
+const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
+
+const xpathRef = fs.readFileSync(
+  path.join(__dirname, "../reference/xpath-failsafe-reference.txt"),
+  "utf8"
+);
+
+export function fallbackLocator(element) {
+  if (element.id) return `//*[@id='${element.id}']`;
+
+  if (element.label)
+    return `//label[normalize-space()='${element.label}']/following::${element.tag}[1]`;
+
+  if (element.class)
+    return `//${element.tag}[contains(@class,'${element.class.split(" ")[0]}')]`;
+
+  return `//${element.tag}`;
+}
+
 export function generateShadowLocator(selection) {
   const css = selection?.css;
   const shadowPath = selection?.shadowPath || [];

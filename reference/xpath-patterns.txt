@@ -1,0 +1,290 @@
+==========================
+ BASIC IDENTIFIERS
+==========================
+# By ID
+//*[@id='email']
+
+# By name
+//*[@name='username']
+
+# By placeholder
+//input[@placeholder='Search']
+
+# By class contains
+//div[contains(@class,'container')]
+
+==========================
+ LABEL-PROXIMITY XPATH
+==========================
+
+# Label → Input
+//label[text()='Email']/following::input[1]
+
+# Normalize whitespace
+//label[normalize-space()='Password']/following-sibling::input
+
+==========================
+ ATTRIBUTE PATTERNS
+==========================
+# Data-test
+//*[@data-test='submit']
+
+# Role-based
+//*[@role='button']
+
+# ARIA
+//*[@aria-label='Close']
+
+==========================
+ STRUCTURAL XPATHS
+==========================
+
+# nth element
+(//input[@type='text'])[3]
+
+# table cells
+//table//tr[2]/td[3]
+
+==========================
+ TEXT MATCHING
+==========================
+# contains
+//*[contains(text(),'Settings')]
+
+# starts-with
+//div[starts-with(@id,'user-')]
+
+# ends-with (XPath 2.0 reference)
+//*[substring(@id, string-length(@id)-3)='-btn']
+
+==========================
+ ADVANCED REAL-WORLD XPATHS
+==========================
+
+# Button near icon
+//span[@class='icon']/following::button[1]
+
+# Checkbox label pairing
+//label[contains(.,'Terms')]/preceding::input[@type='checkbox']
+
+# Dynamic dropdown
+//div[contains(@class,'select__control')]
+
+# React portals
+//*[@id='portal-root']//button[text()='Confirm']
+
+# SVG elements
+//*[name()='svg']//*[name()='path']
+
+# Form validation
+//input[@id='email']/following::div[contains(@class,'error-message')]
+
+# Modal dialogs
+//div[contains(@class,'modal')]/descendant::button[text()='Save']
+
+# Navigation menus
+//nav//ul/li/a[contains(text(),'Products')]
+
+# Search results
+//div[contains(@class,'search-result')][.//h3[contains(text(),'iPhone')]]
+
+# Loading states
+//div[contains(@class,'loading')]/descendant::span[text()='Processing...']
+
+# Error states
+//div[contains(@class,'error')]/descendant::p[contains(@class,'message')]
+
+# Success notifications
+//div[contains(@class,'notification')][contains(@class,'success')]
+
+# Table actions
+//table//tr[td[text()='John Doe']]/td[last()]/button[contains(@class,'edit')]
+
+# Pagination
+//nav[contains(@class,'pagination')]/a[contains(text(),'Next')]
+
+# Tabs
+//div[contains(@class,'tabs')]/button[contains(@class,'tab')][contains(text(),'Settings')]
+
+# Accordion sections
+//div[contains(@class,'accordion')]/button[contains(@class,'header')][contains(text(),'Billing')]
+
+# Carousel controls
+//div[contains(@class,'carousel')]/button[contains(@class,'next')]
+
+# File uploads
+//input[@type='file']/following::button[contains(text(),'Upload')]
+
+# Date pickers
+//input[@type='date']/following::button[contains(@class,'calendar')]
+
+# Time pickers
+//input[@type='time']/following::button[contains(@class,'clock')]
+
+# Color pickers
+//input[@type='color']/following::div[contains(@class,'color-picker')]
+
+# Range sliders
+//input[@type='range']/following::span[contains(@class,'value')]
+
+# Multi-select dropdowns
+//div[contains(@class,'multi-select')]/descendant::input[contains(@class,'search')]
+
+# Tag inputs
+//div[contains(@class,'tag-input')]/descendant::input[contains(@class,'tag-field')]
+
+# Rich text editors
+//div[contains(@class,'editor')]/descendant::div[contains(@class,'content')]
+
+# Code editors
+//div[contains(@class,'code-editor')]/descendant::textarea[contains(@class,'code')]
+
+# Tree views
+//div[contains(@class,'tree')]/descendant::li[contains(@class,'node')][contains(text(),'Documents')]
+
+# Data grids
+//div[contains(@class,'data-grid')]/descendant::div[contains(@class,'row')][contains(text(),'Product A')]
+
+# Charts
+//div[contains(@class,'chart')]/descendant::canvas[contains(@class,'plot')]
+
+# Maps
+//div[contains(@class,'map')]/descendant::div[contains(@class,'marker')]
+
+# Video players
+//div[contains(@class,'video-player')]/descendant::button[contains(@class,'play')]
+
+# Audio players
+//div[contains(@class,'audio-player')]/descendant::button[contains(@class,'play')]
+
+# Image galleries
+//div[contains(@class,'gallery')]/descendant::img[contains(@class,'thumbnail')]
+
+# Lightboxes
+//div[contains(@class,'lightbox')]/descendant::button[contains(@class,'close')]
+
+# Tooltips
+//div[contains(@class,'tooltip')]/descendant::div[contains(@class,'content')]
+
+# Popovers
+//div[contains(@class,'popover')]/descendant::div[contains(@class,'body')]
+
+# Dropdown menus
+//div[contains(@class,'dropdown')]/descendant::ul[contains(@class,'menu')]
+
+# Context menus
+//div[contains(@class,'context-menu')]/descendant::li[contains(@class,'item')]
+
+# Breadcrumbs
+//nav[contains(@class,'breadcrumb')]/descendant::a[contains(text(),'Home')]
+
+# Sidebars
+//aside[contains(@class,'sidebar')]/descendant::a[contains(text(),'Dashboard')]
+
+# Footers
+//footer[contains(@class,'footer')]/descendant::a[contains(text(),'Contact')]
+
+# Headers
+//header[contains(@class,'header')]/descendant::nav[contains(@class,'navigation')]
+
+# Search bars
+//div[contains(@class,'search-bar')]/descendant::input[contains(@class,'search-input')]
+
+# Filter panels
+//div[contains(@class,'filter-panel')]/descendant::input[contains(@class,'filter')]
+
+# Sort controls
+//div[contains(@class,'sort')]/descendant::select[contains(@class,'sort-select')]
+
+# View toggles
+//div[contains(@class,'view-toggle')]/descendant::button[contains(@class,'grid-view')]
+
+# List views
+//div[contains(@class,'list-view')]/descendant::div[contains(@class,'list-item')]
+
+# Grid views
+//div[contains(@class,'grid-view')]/descendant::div[contains(@class,'grid-item')]
+
+# Card layouts
+//div[contains(@class,'card')]/descendant::h3[contains(@class,'title')]
+
+# Form sections
+//fieldset[contains(@class,'section')]/descendant::legend[contains(text(),'Personal Information')]
+
+# Wizard steps
+//div[contains(@class,'wizard')]/descendant::div[contains(@class,'step')][contains(text(),'Step 2')]
+
+# Progress bars
+//div[contains(@class,'progress')]/descendant::div[contains(@class,'bar')]
+
+# Status indicators
+//div[contains(@class,'status')]/descendant::span[contains(@class,'indicator')]
+
+# Badges
+//span[contains(@class,'badge')][contains(text(),'New')]
+
+# Avatars
+//img[contains(@class,'avatar')]/following::span[contains(@class,'name')]
+
+# User profiles
+//div[contains(@class,'profile')]/descendant::img[contains(@class,'photo')]
+
+# Comments
+//div[contains(@class,'comment')]/descendant::p[contains(@class,'text')]
+
+# Replies
+//div[contains(@class,'reply')]/descendant::span[contains(@class('author')]
+
+# Likes and reactions
+//button[contains(@class,'like')]/following::span[contains(@class,'count')]
+
+# Share buttons
+//button[contains(@class,'share')]/following::div[contains(@class,'share-menu')]
+
+# Print buttons
+//button[contains(@class,'print')]/following::div[contains(@class,'print-preview')]
+
+# Download buttons
+//button[contains(@class,'download')]/following::a[contains(@class,'download-link')]
+
+# Upload areas
+//div[contains(@class,'upload-area')]/descendant::input[@type='file']
+
+# Drag and drop zones
+//div[contains(@class,'drop-zone')]/descendant::div[contains(@class,'drop-area')]
+
+# Loading spinners
+//div[contains(@class,'spinner')]/descendant::div[contains(@class,'spinner-circle')]
+
+# Skeleton loaders
+//div[contains(@class,'skeleton')]/descendant::div[contains(@class,'skeleton-item')]
+
+# Empty states
+//div[contains(@class,'empty-state')]/descendant::h3[contains(text(),'No data available')]
+
+# Error pages
+//div[contains(@class,'error-page')]/descendant::h1[contains(text(),'404')]
+
+# Maintenance pages
+//div[contains(@class,'maintenance')]/descendant::h2[contains(text(),'Under Maintenance')]
+
+# Login forms
+//form[contains(@class,'login')]/descendant::input[@id='username']
+
+# Registration forms
+//form[contains(@class,'register')]/descendant::input[@id='email']
+
+# Contact forms
+//form[contains(@class,'contact')]/descendant::textarea[@id='message']
+
+# Search forms
+//form[contains(@class,'search')]/descendant::input[@type='search']
+
+# Filter forms
+//form[contains(@class,'filter')]/descendant::select[@name='category']
+
+# Sort forms
+//form[contains(@class,'sort')]/descendant::select[@name='sort-by']
+
+# Pagination forms
+//form[contains(@class,'pagination')]/descendant::input[@name='page']

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Reference Playground</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            color: #333;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea, button {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        input[type="text"], input[type="email"], input[type="password"], select, textarea {
+            width: 100%;
+            max-width: 300px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button.secondary {
+            background-color: #6c757d;
+        }
+        button.secondary:hover {
+            background-color: #545b62;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .table th {
+            background-color: #f8f9fa;
+        }
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        .card h3 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        .navigation {
+            background-color: #343a40;
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+        .navigation ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .navigation li {
+            margin: 0 15px;
+        }
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .navigation a:hover {
+            background-color: #495057;
+        }
+        .search-box {
+            margin: 20px 0;
+        }
+        .search-box input {
+            width: 100%;
+            max-width: 400px;
+        }
+        .alert {
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .alert-success {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+        .alert-error {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+        .shadow-host {
+            border: 2px solid #007bff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Section -->
+    <nav class="navigation">
+        <ul>
+            <li><a href="#forms">Forms</a></li>
+            <li><a href="#tables">Tables</a></li>
+            <li><a href="#dynamic">Dynamic Elements</a></li>
+            <li><a href="#shadow-dom">Shadow DOM</a></li>
+            <li><a href="#interactive">Interactive</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Test Reference Playground</h1>
+        <p>This page contains various HTML elements for testing XPath, CSS selectors, and Shadow DOM locators.</p>
+    </div>
+
+    <!-- Forms Section -->
+    <div id="forms" class="container">
+        <div class="section">
+            <h2>Form Elements</h2>
+            
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter username">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter email">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter password">
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <select id="country" name="country">
+                    <option value="">Select a country</option>
+                    <option value="us">United States</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="ca">Canada</option>
+                    <option value="au">Australia</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Enter your message"></textarea>
+            </div>
+
+            <div class="form-group">
+                <button id="submit-btn" type="button">Submit</button>
+                <button id="cancel-btn" type="button" class="secondary">Cancel</button>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="newsletter" name="newsletter"> Subscribe to newsletter
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    <input type="radio" name="gender" value="male"> Male
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="female"> Female
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="other"> Other
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tables Section -->
+    <div id="tables" class="container">
+        <div class="section">
+            <h2>Tables</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td>john@example.com</td>
+                        <td><button class="edit-btn" data-id="1">Edit</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jane Smith</td>
+                        <td>jane@example.com</td>
+                        <td><button class="edit-btn" data-id="2">Edit</button></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Bob Johnson</td>
+                        <td>bob@example.com</td>
+                        <td><button class="edit-btn" data-id="3">Edit</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Dynamic Elements Section -->
+    <div id="dynamic" class="container">
+        <div class="section">
+            <h2>Dynamic Elements</h2>
+            
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search...">
+                <button id="search-btn">Search</button>
+            </div>
+
+            <div id="dynamic-content">
+                <div class="card" data-category="product">
+                    <h3>Product 1</h3>
+                    <p>This is a product description.</p>
+                    <span class="price">$19.99</span>
+                </div>
+                <div class="card" data-category="service">
+                    <h3>Service 1</h3>
+                    <p>This is a service description.</p>
+                    <span class="price">$29.99</span>
+                </div>
+            </div>
+
+            <div id="loading" style="display: none;">
+                <p>Loading...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shadow DOM Section -->
+    <div id="shadow-dom" class="container">
+        <div class="section">
+            <h2>Shadow DOM Elements</h2>
+            
+            <div id="shadow-host-1" class="shadow-host">
+                <p>Light DOM content</p>
+            </div>
+
+            <div id="shadow-host-2" class="shadow-host">
+                <p>Another shadow host</p>
+            </div>
+
+            <custom-element id="custom-component"></custom-element>
+        </div>
+    </div>
+
+    <!-- Interactive Elements -->
+    <div id="interactive" class="container">
+        <div class="section">
+            <h2>Interactive Elements</h2>
+            
+            <div class="form-group">
+                <a href="#forms" id="forms-link">Go to Forms</a>
+                <a href="#tables" id="tables-link">Go to Tables</a>
+            </div>
+
+            <div class="form-group">
+                <button id="alert-btn">Show Alert</button>
+                <button id="toggle-btn">Toggle Content</button>
+            </div>
+
+            <div id="toggle-content" style="display: none;">
+                <p>This content can be toggled on and off.</p>
+            </div>
+
+            <div id="message-container"></div>
+        </div>
+    </div>
+
+    <!-- Success/Error Messages -->
+    <div id="success-message" class="alert alert-success" style="display: none;">
+        Operation completed successfully!
+    </div>
+
+    <div id="error-message" class="alert alert-error" style="display: none;">
+        An error occurred!
+    </div>
+
+    <script>
+        // Shadow DOM Implementation
+        class CustomElement extends HTMLElement {
+            constructor() {
+                super();
+                this.attachShadow({ mode: 'open' });
+                this.shadowRoot.innerHTML = `
+                    <style>
+                        .shadow-content {
+                            padding: 10px;
+                            background-color: #f0f0f0;
+                            border-radius: 4px;
+                        }
+                        .shadow-button {
+                            background-color: #28a745;
+                            color: white;
+                            border: none;
+                            padding: 8px 12px;
+                            border-radius: 4px;
+                            cursor: pointer;
+                        }
+                    </style>
+                    <div class="shadow-content">
+                        <p>This is inside Shadow DOM</p>
+                        <button class="shadow-button">Shadow Button</button>
+                        <input type="text" placeholder="Shadow input" class="shadow-input">
+                    </div>
+                `;
+            }
+        }
+
+        customElements.define('custom-element', CustomElement);
+
+        // Initialize Shadow DOM hosts
+        function initializeShadowDOM() {
+            const host1 = document.getElementById('shadow-host-1');
+            const shadow1 = host1.attachShadow({ mode: 'open' });
+            shadow1.innerHTML = `
+                <style>
+                    .shadow-div {
+                        padding: 10px;
+                        background-color: #e3f2fd;
+                        border: 1px solid #2196f3;
+                        border-radius: 4px;
+                    }
+                </style>
+                <div class="shadow-div">
+                    <p>Shadow DOM content 1</p>
+                    <button id="shadow-btn-1">Shadow Button 1</button>
+                </div>
+            `;
+
+            const host2 = document.getElementById('shadow-host-2');
+            const shadow2 = host2.attachShadow({ mode: 'open' });
+            shadow2.innerHTML = `
+                <style>
+                    .shadow-div {
+                        padding: 10px;
+                        background-color: #f3e5f5;
+                        border: 1px solid #9c27b0;
+                        border-radius: 4px;
+                    }
+                </style>
+                <div class="shadow-div">
+                    <p>Shadow DOM content 2</p>
+                    <input type="text" placeholder="Shadow input 2" class="shadow-input-2">
+                    <button id="shadow-btn-2">Shadow Button 2</button>
+                </div>
+            `;
+        }
+
+        // Interactive functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeShadowDOM();
+
+            // Button click handlers
+            document.getElementById('submit-btn').addEventListener('click', function() {
+                showMessage('success', 'Form submitted successfully!');
+            });
+
+            document.getElementById('cancel-btn').addEventListener('click', function() {
+                clearForm();
+            });
+
+            document.getElementById('alert-btn').addEventListener('click', function() {
+                alert('This is an alert message!');
+            });
+
+            document.getElementById('toggle-btn').addEventListener('click', function() {
+                const content = document.getElementById('toggle-content');
+                content.style.display = content.style.display === 'none' ? 'block' : 'none';
+            });
+
+            document.getElementById('search-btn').addEventListener('click', function() {
+                const searchTerm = document.getElementById('search-input').value;
+                if (searchTerm) {
+                    showMessage('success', `Searching for: ${searchTerm}`);
+                }
+            });
+
+            // Edit buttons in table
+            document.querySelectorAll('.edit-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const id = this.getAttribute('data-id');
+                    showMessage('success', `Editing item with ID: ${id}`);
+                });
+            });
+        });
+
+        function showMessage(type, message) {
+            const messageEl = document.getElementById(type === 'success' ? 'success-message' : 'error-message');
+            messageEl.textContent = message;
+            messageEl.style.display = 'block';
+            
+            setTimeout(() => {
+                messageEl.style.display = 'none';
+            }, 3000);
+        }
+
+        function clearForm() {
+            document.getElementById('username').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('password').value = '';
+            document.getElementById('country').value = '';
+            document.getElementById('message').value = '';
+            document.getElementById('newsletter').checked = false;
+            document.querySelectorAll('input[name="gender"]').forEach(radio => {
+                radio.checked = false;
+            });
+        }
+    </script>
+</body>
+</html>

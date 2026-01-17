@@ -1,0 +1,95 @@
+==========================
+ XPATH AXES — DEFINITIVE LIST
+==========================
+
+# Self
+. 
+self::node()
+
+# Parent
+parent::*
+
+# Child
+child::*
+
+# Ancestor
+ancestor::div
+ancestor::*[@class='form-group']
+
+# Ancestor-or-self
+ancestor-or-self::*
+
+# Descendant
+descendant::input
+descendant::*[@role='button']
+
+# Descendant-or-self
+descendant-or-self::*
+
+# Following
+following::input
+following::button[1]
+
+# Following-sibling
+following-sibling::div
+following-sibling::input[1]
+
+# Preceding
+preceding::label
+preceding::node()[1]
+
+# Preceding-sibling
+preceding-sibling::label
+preceding-sibling::div[1]
+
+# Namespace
+namespace::*
+
+# Attribute axis
+attribute::id
+attribute::class
+attribute::data-test
+
+==========================
+ XPATH AXES PATTERN EXAMPLES
+==========================
+
+# Identify field by label
+//label[text()='Email']/following-sibling::input
+
+# Find button inside the same section
+//h2[text()='Profile']/following::button[1]
+
+# Go from input back to label
+//input[@id='phone']/preceding-sibling::label
+
+# Select first input after a title block
+//div[@class='title']/following::input[1]
+
+# Parent traversal
+//input[@id='zip']/parent::div
+
+# Table navigation
+//table//tr[3]/following-sibling::tr[1]
+
+# From nested span up to container
+//span[text()='Total']/ancestor::div[contains(@class,'container')]
+
+# Identify field in repeated form rows
+(//input[@type='text'])[3]/ancestor::div[@class='row']
+
+==========================
+ ADVANCED AXES
+==========================
+
+# Between two known elements
+//label[text()='Amount']/following::input[1]/preceding::div[contains(@class,'currency')]
+
+# Section-scoped axes
+(//div[@class='payment-section'])[1]//descendant::input[@type='number']
+
+# Ref node by index
+(//button)[last()]/preceding::input[1]
+
+# Scoped axes inside panel
+//div[@id='login-panel']//descendant::input[@type='password']

@@ -1,0 +1,611 @@
+# Pagination buttons
+//button[contains(.,'Next')]
+
+# Table row containing text
+//tr[td[contains(.,'John Doe')]]
+
+# Toast message
+//div[contains(@class,'toast-success')]
+
+# Error messages
+//div[contains(@class,'error-message')]
+
+# Success notifications
+//div[contains(@class,'notification-success')]
+
+# Loading spinners
+//div[contains(@class,'loading-spinner')]
+
+# Modal dialogs
+//div[contains(@class,'modal') and contains(@class,'show')]
+
+# Dropdown menus
+//div[contains(@class,'dropdown-menu')]
+
+# Search results
+//div[contains(@class,'search-result')]
+
+# Product cards
+//div[contains(@class,'product-card')]
+
+# User profiles
+//div[contains(@class,'user-profile')]
+
+# Login forms
+//form[contains(@class,'login-form')]
+
+# Registration forms
+//form[contains(@class,'registration-form')]
+
+# Contact forms
+//form[contains(@class,'contact-form')]
+
+# Navigation menus
+//nav[contains(@class,'main-navigation')]
+
+# Footer links
+//footer//a[contains(text(),'Contact')]
+
+# Social media buttons
+//a[contains(@class,'social-button')]
+
+# Shopping cart
+//div[contains(@class,'shopping-cart')]
+
+# Checkout button
+//button[contains(text(),'Checkout')]
+
+# Add to cart
+//button[contains(text(),'Add to Cart')]
+
+# Product images
+//img[contains(@class,'product-image')]
+
+# Price displays
+//span[contains(@class,'price')]
+
+# Discount badges
+//span[contains(@class,'discount-badge')]
+
+# Rating stars
+//div[contains(@class,'rating-stars')]
+
+# Customer reviews
+//div[contains(@class,'customer-review')]
+
+# FAQ sections
+//div[contains(@class,'faq-section')]
+
+# Help articles
+//article[contains(@class,'help-article')]
+
+# Support tickets
+//div[contains(@class,'support-ticket')]
+
+# Chat windows
+//div[contains(@class,'chat-window')]
+
+# File uploads
+//input[@type='file']
+
+# Download links
+//a[contains(@class,'download-link')]
+
+# Video players
+//video[contains(@class,'video-player')]
+
+# Audio players
+//audio[contains(@class,'audio-player')]
+
+# Image galleries
+//div[contains(@class,'image-gallery')]
+
+# Sliders/carousels
+//div[contains(@class,'carousel')]
+
+# Tab panels
+//div[contains(@class,'tab-panel')]
+
+# Accordions
+//div[contains(@class,'accordion')]
+
+# Tooltips
+//div[contains(@class,'tooltip')]
+
+# Popovers
+//div[contains(@class,'popover')]
+
+# Progress bars
+//div[contains(@class,'progress-bar')]
+
+# Status indicators
+//span[contains(@class,'status-indicator')]
+
+# Badges
+//span[contains(@class,'badge')]
+
+# Tags
+//span[contains(@class,'tag')]
+
+# Labels
+//label[contains(text(),'Email')]
+
+# Input fields
+//input[contains(@class,'form-input')]
+
+# Text areas
+//textarea[contains(@class,'form-textarea')]
+
+# Select dropdowns
+//select[contains(@class,'form-select')]
+
+# Checkboxes
+//input[@type='checkbox']
+
+# Radio buttons
+//input[@type='radio']
+
+# Submit buttons
+//button[@type='submit']
+
+# Reset buttons
+//button[@type='reset']
+
+# Cancel buttons
+//button[contains(text(),'Cancel')]
+
+# Save buttons
+//button[contains(text(),'Save')]
+
+# Edit buttons
+//button[contains(text(),'Edit')]
+
+# Delete buttons
+//button[contains(text(),'Delete')]
+
+# Update buttons
+//button[contains(text(),'Update')]
+
+# Create buttons
+//button[contains(text(),'Create')]
+
+# Search buttons
+//button[contains(text(),'Search')]
+
+# Filter buttons
+//button[contains(text(),'Filter')]
+
+# Sort buttons
+//button[contains(text(),'Sort')]
+
+# Export buttons
+//button[contains(text(),'Export')]
+
+# Import buttons
+//button[contains(text(),'Import')]
+
+# Print buttons
+//button[contains(text(),'Print')]
+
+# Share buttons
+//button[contains(text(),'Share')]
+
+# Like buttons
+//button[contains(text(),'Like')]
+
+# Comment buttons
+//button[contains(text(),'Comment')]
+
+# Reply buttons
+//button[contains(text(),'Reply')]
+
+# Forward buttons
+//button[contains(text(),'Forward')]
+
+# Back buttons
+//button[contains(text(),'Back')]
+
+# Next buttons
+//button[contains(text(),'Next')]
+
+# Previous buttons
+//button[contains(text(),'Previous')]
+
+# First buttons
+//button[contains(text(),'First')]
+
+# Last buttons
+//button[contains(text(),'Last')]
+
+# Home buttons
+//button[contains(text(),'Home')]
+
+# Dashboard links
+//a[contains(text(),'Dashboard')]
+
+# Profile links
+//a[contains(text(),'Profile')]
+
+# Settings links
+//a[contains(text(),'Settings')]
+
+# Logout links
+//a[contains(text(),'Logout')]
+
+# Login links
+//a[contains(text(),'Login')]
+
+# Register links
+//a[contains(text(),'Register')]
+
+# Forgot password links
+//a[contains(text(),'Forgot Password')]
+
+# Reset password links
+//a[contains(text(),'Reset Password')]
+
+# Change password links
+//a[contains(text(),'Change Password')]
+
+# Account links
+//a[contains(text(),'Account')]
+
+# Billing links
+//a[contains(text(),'Billing')]
+
+# Subscription links
+//a[contains(text(),'Subscription')]
+
+# Payment links
+//a[contains(text(),'Payment')]
+
+# Order history links
+//a[contains(text(),'Order History')]
+
+# Order details links
+//a[contains(text(),'Order Details')]
+
+# Tracking links
+//a[contains(text(),'Tracking')]
+
+# Shipping links
+//a[contains(text(),'Shipping')]
+
+# Returns links
+//a[contains(text(),'Returns')]
+
+# Refunds links
+//a[contains(text(),'Refunds')]
+
+# Support links
+//a[contains(text(),'Support')]
+
+# Help links
+//a[contains(text(),'Help')]
+
+# FAQ links
+//a[contains(text(),'FAQ')]
+
+# Terms links
+//a[contains(text(),'Terms')]
+
+# Privacy links
+//a[contains(text(),'Privacy')]
+
+# About links
+//a[contains(text(),'About')]
+
+# Contact links
+//a[contains(text(),'Contact')]
+
+# Blog links
+//a[contains(text(),'Blog')]
+
+# News links
+//a[contains(text(),'News')]
+
+# Events links
+//a[contains(text(),'Events')]
+
+# Products links
+//a[contains(text(),'Products')]
+
+# Services links
+//a[contains(text(),'Services')]
+
+# Solutions links
+//a[contains(text(),'Solutions')]
+
+# Pricing links
+//a[contains(text(),'Pricing')]
+
+# Demo links
+//a[contains(text(),'Demo')]
+
+# Free trial links
+//a[contains(text(),'Free Trial')]
+
+# Sign up links
+//a[contains(text(),'Sign Up')]
+
+# Get started links
+//a[contains(text(),'Get Started')]
+
+# Learn more links
+//a[contains(text(),'Learn More')]
+
+# Read more links
+//a[contains(text(),'Read More')]
+
+# View details links
+//a[contains(text(),'View Details')]
+
+# Show more links
+//a[contains(text(),'Show More')]
+
+# Show less links
+//a[contains(text(),'Show Less')]
+
+# Expand links
+//a[contains(text(),'Expand')]
+
+# Collapse links
+//a[contains(text(),'Collapse')]
+
+# Close links
+//a[contains(text(),'Close')]
+
+# Dismiss links
+//a[contains(text(),'Dismiss')]
+
+# Accept links
+//a[contains(text(),'Accept')]
+
+# Decline links
+//a[contains(text(),'Decline')]
+
+# Agree links
+//a[contains(text(),'Agree')]
+
+# Disagree links
+//a[contains(text(),'Disagree')]
+
+# Confirm links
+//a[contains(text(),'Confirm')]
+
+# Cancel links
+//a[contains(text(),'Cancel')]
+
+# Continue links
+//a[contains(text(),'Continue')]
+
+# Finish links
+//a[contains(text(),'Finish')]
+
+# Complete links
+//a[contains(text(),'Complete')]
+
+# Submit links
+//a[contains(text(),'Submit')]
+
+# Apply links
+//a[contains(text(),'Apply')]
+
+# Reset links
+//a[contains(text(),'Reset')]
+
+# Clear links
+//a[contains(text(),'Clear')]
+
+# Remove links
+//a[contains(text(),'Remove')]
+
+# Add links
+//a[contains(text(),'Add')]
+
+# Insert links
+//a[contains(text(),'Insert')]
+
+# Update links
+//a[contains(text(),'Update')]
+
+# Modify links
+//a[contains(text(),'Modify')]
+
+# Change links
+//a[contains(text(),'Change')]
+
+# Edit links
+//a[contains(text(),'Edit')]
+
+# Delete links
+//a[contains(text(),'Delete')]
+
+# Copy links
+//a[contains(text(),'Copy')]
+
+# Cut links
+//a[contains(text(),'Cut')]
+
+# Paste links
+//a[contains(text(),'Paste')]
+
+# Undo links
+//a[contains(text(),'Undo')]
+
+# Redo links
+//a[contains(text(),'Redo')]
+
+# Select all links
+//a[contains(text(),'Select All')]
+
+# Deselect all links
+//a[contains(text(),'Deselect All')]
+
+# Select none links
+//a[contains(text(),'Select None')]
+
+# Invert selection links
+//a[contains(text(),'Invert Selection')]
+
+# Find links
+//a[contains(text(),'Find')]
+
+# Replace links
+//a[contains(text(),'Replace')]
+
+# Search links
+//a[contains(text(),'Search')]
+
+# Filter links
+//a[contains(text(),'Filter')]
+
+# Sort links
+//a[contains(text(),'Sort')]
+
+# Group links
+//a[contains(text(),'Group')]
+
+# Ungroup links
+//a[contains(text(),'Ungroup')]
+
+# Merge links
+//a[contains(text(),'Merge')]
+
+# Split links
+//a[contains(text(),'Split')]
+
+# Join links
+//a[contains(text(),'Join')]
+
+# Connect links
+//a[contains(text(),'Connect')]
+
+# Disconnect links
+//a[contains(text(),'Disconnect')]
+
+# Attach links
+//a[contains(text(),'Attach')]
+
+# Detach links
+//a[contains(text(),'Detach')]
+
+# Upload links
+//a[contains(text(),'Upload')]
+
+# Download links
+//a[contains(text(),'Download')]
+
+# Import links
+//a[contains(text(),'Import')]
+
+# Export links
+//a[contains(text(),'Export')]
+
+# Backup links
+//a[contains(text(),'Backup')]
+
+# Restore links
+//a[contains(text(),'Restore')]
+
+# Sync links
+//a[contains(text(),'Sync')]
+
+# Refresh links
+//a[contains(text(),'Refresh')]
+
+# Reload links
+//a[contains(text(),'Reload')]
+
+# Update links
+//a[contains(text(),'Update')]
+
+# Upgrade links
+//a[contains(text(),'Upgrade')]
+
+# Downgrade links
+//a[contains(text(),'Downgrade')]
+
+# Install links
+//a[contains(text(),'Install')]
+
+# Uninstall links
+//a[contains(text(),'Uninstall')]
+
+# Enable links
+//a[contains(text(),'Enable')]
+
+# Disable links
+//a[contains(text(),'Disable')]
+
+# Activate links
+//a[contains(text(),'Activate')]
+
+# Deactivate links
+//a[contains(text(),'Deactivate')]
+
+# Start links
+//a[contains(text(),'Start')]
+
+# Stop links
+//a[contains(text(),'Stop')]
+
+# Pause links
+//a[contains(text(),'Pause')]
+
+# Resume links
+//a[contains(text(),'Resume')]
+
+# Play links
+//a[contains(text(),'Play')]
+
+# Stop links
+//a[contains(text(),'Stop')]
+
+# Record links
+//a[contains(text(),'Record')]
+
+# Mute links
+//a[contains(text(),'Mute')]
+
+# Unmute links
+//a[contains(text(),'Unmute')]
+
+# Volume up links
+//a[contains(text(),'Volume Up')]
+
+# Volume down links
+//a[contains(text(),'Volume Down')]
+
+# Fullscreen links
+//a[contains(text(),'Fullscreen')]
+
+# Exit fullscreen links
+//a[contains(text(),'Exit Fullscreen')]
+
+# Minimize links
+//a[contains(text(),'Minimize')]
+
+# Maximize links
+//a[contains(text(),'Maximize')]
+
+# Close links
+//a[contains(text(),'Close')]
+
+# Exit links
+//a[contains(text(),'Exit')]
+
+# Quit links
+//a[contains(text(),'Quit')]
+
+# Sign out links
+//a[contains(text(),'Sign Out')]
+
+# Log out links
+//a[contains(text(),'Log Out')]
+
+# Sign in links
+//a[contains(text(),'Sign In')]
+
+# Log in links
+//a[contains(text(),'Log In')]

@@ -1,0 +1,363 @@
+# React Select
+//*[contains(@class,'select__control')]
+
+# Angular ng-model
+//*[@ng-model='username']
+
+# Vue data attributes
+//*[@v-model='email']
+
+# Svelte automation
+//*[@data-sveltekit='true']
+
+# React component testing
+//*[contains(@class,'MuiButton-root')]
+
+# React Material-UI
+//*[contains(@class,'MuiTextField-root')]
+
+# React Ant Design
+//*[contains(@class,'ant-btn')]
+//*[contains(@class,'ant-input')]
+
+# React Bootstrap
+//*[contains(@class,'btn-primary')]
+//*[contains(@class,'form-control')]
+
+# Vue.js components
+//*[@data-v-]
+//*[contains(@class,'vue-component')]
+
+# Vue Element UI
+//*[contains(@class,'el-button')]
+//*[contains(@class,'el-input')]
+
+# Vue Vuetify
+//*[contains(@class,'v-btn')]
+//*[contains(@class,'v-text-field')]
+
+# Angular Material
+//*[contains(@class,'mat-button')]
+//*[contains(@class,'mat-input-element')]
+
+# Angular ng-bootstrap
+//*[contains(@class,'btn')]
+//*[contains(@class,'form-control')]
+
+# Angular PrimeNG
+//*[contains(@class,'p-button')]
+//*[contains(@class,'p-inputtext')]
+
+# Svelte components
+//*[contains(@class,'svelte-')]
+
+# Svelte SvelteKit
+//*[@data-sveltekit-navigating]
+
+# jQuery UI
+//*[contains(@class,'ui-button')]
+//*[contains(@class,'ui-input')]
+
+# Bootstrap components
+//*[contains(@class,'btn')]
+//*[contains(@class,'form-control')]
+//*[contains(@class,'dropdown-menu')]
+
+# Foundation components
+//*[contains(@class,'button')]
+//*[contains(@class('input-field')]
+
+# Semantic UI
+//*[contains(@class,'ui button')]
+//*[contains(@class,'ui input')]
+
+# Tailwind CSS components
+//*[contains(@class,'bg-blue-500')]
+//*[contains(@class,'text-white')]
+
+# Bulma components
+//*[contains(@class,'button')]
+//*[contains(@class('input')]
+
+# Materialize CSS
+//*[contains(@class,'btn')]
+//*[contains(@class,'input-field')]
+
+# UIKit components
+//*[contains(@class,'uk-button')]
+//*[contains(@class,'uk-input')]
+
+# Polymer components
+//*[contains(@class,'paper-button')]
+//*[contains(@class,'paper-input')]
+
+# Lit Element components
+//*[contains(@class,'lit-element')]
+
+# Stencil.js components
+//*[contains(@class,'stencil-component')]
+
+# Web Components
+//*[contains(@class,'web-component')]
+
+# Custom Elements
+//custom-element
+//my-component
+
+# Shadow DOM components
+//div[@data-shadow-root]
+
+# React hooks testing
+//*[@data-testid='submit-button']
+
+# React Testing Library
+//*[@data-testid='username-input']
+
+# Vue Test Utils
+//*[@data-test='login-form']
+
+# Angular Testing
+//*[@data-cy='login-button']
+
+# Cypress testing
+//*[@data-cy='submit']
+//*[@data-test='user-email']
+
+# Playwright testing
+//*[@data-testid='login-form']
+//*[@data-test='password-input']
+
+# Selenium testing
+//*[@id='username']
+//*[@name='password']
+
+# WebDriverIO testing
+//*[@data-automation='login-button']
+
+# TestCafe testing
+//*[@data-testcafe='submit-form']
+
+# Puppeteer testing
+//*[@data-puppeteer='login']
+
+# Protractor testing (Angular)
+//*[@ng-model='user.name']
+//*[@ng-click='submitForm()']
+
+# Karma testing
+//*[@data-karma='test-element']
+
+# Jest testing
+//*[@data-jest='test-component']
+
+# Mocha testing
+//*[@data-mocha='test-element']
+
+# Chai testing
+//*[@data-chai='assertion']
+
+# Sinon testing
+//*[@data-sinon='mock-element']
+
+# Enzyme testing (React)
+//*[@data-enzyme='shallow-wrapper']
+
+# React Testing Library
+//*[@data-testid='component']
+//*[@aria-label='submit form']
+
+# Vue Testing Library
+//*[@data-test='vue-component']
+
+# Angular Testing Library
+//*[@data-testid='angular-component']
+
+# Svelte Testing Library
+//*[@data-testid='svelte-component']
+
+# Storybook testing
+//*[@data-storybook='component']
+
+# Chromatic testing
+//*[@data-chromatic='visual-test']
+
+# Percy testing
+//*[@data-percy='screenshot']
+
+# Applitools testing
+//*[@data-applitools='visual-check']
+
+# BrowserStack testing
+//*[@data-browserstack='cross-browser']
+
+# Sauce Labs testing
+//*[@data-saucelabs='cloud-test']
+
+# CrossBrowserTesting
+//*[@data-crossbrowsertesting='compatibility']
+
+# LambdaTest testing
+//*[@data-lambdatest='cloud-testing']
+
+# TestingBot testing
+//*[@data-testingbot='browser-test']
+
+# Headless Chrome testing
+//*[@data-headless='chrome-test']
+
+# Firefox testing
+//*[@data-firefox='mozilla-test']
+
+# Safari testing
+//*[@data-safari='webkit-test']
+
+# Edge testing
+//*[@data-edge='microsoft-test']
+
+# Internet Explorer testing
+//*[@data-ie='legacy-test']
+
+# Mobile testing
+//*[@data-mobile='responsive-test']
+//*[@data-ios='apple-test']
+//*[@data-android='google-test']
+
+# Tablet testing
+//*[@data-tablet='medium-screen']
+
+# Desktop testing
+//*[@data-desktop='large-screen']
+
+# Responsive testing
+//*[@data-responsive='breakpoint-test']
+
+# Accessibility testing
+//*[@data-axe='accessibility-test']
+//*[@data-aria='screen-reader']
+
+# Performance testing
+//*[@data-lighthouse='performance-test']
+//*[@data-web-vitals='core-metrics']
+
+# Security testing
+//*[@data-security='vulnerability-test']
+//*[@data-xss='injection-test']
+
+# API testing
+//*[@data-api='endpoint-test']
+//*[@data-rest='service-test']
+
+# GraphQL testing
+//*[@data-graphql='query-test']
+//*[@data-gql='schema-test']
+
+# WebSocket testing
+//*[@data-websocket='realtime-test']
+
+# Server-sent events testing
+//*[@data-sse='event-stream-test']
+
+# Service worker testing
+//*[@data-serviceworker='offline-test']
+
+# PWA testing
+//*[@data-pwa='progressive-web-app']
+
+# AMP testing
+//*[@data-amp='accelerated-mobile-page']
+
+# SEO testing
+//*[@data-seo='search-optimization']
+//*[@data-meta='tag-test']
+
+# Analytics testing
+//*[@data-analytics='tracking-test']
+//*[@data-gtm='tag-manager']
+
+# Marketing automation
+//*[@data-marketing='campaign-test']
+//*[@data-crm='customer-relationship']
+
+# E-commerce testing
+//*[@data-ecommerce='shopping-cart']
+//*[@data-payment='transaction-test']
+
+# Social media testing
+//*[@data-social='sharing-test']
+//*[@data-facebook='meta-platform']
+
+# Video streaming testing
+//*[@data-video='media-test']
+//*[@data-youtube='streaming-test']
+
+# Audio streaming testing
+//*[@data-audio='sound-test']
+//*[@data-spotify='music-test']
+
+# Gaming testing
+//*[@data-game='interactive-test']
+//*[@data-unity='game-engine']
+
+# AR/VR testing
+//*[@data-ar='augmented-reality']
+//*[@data-vr='virtual-reality']
+
+# IoT testing
+//*[@data-iot='internet-of-things']
+//*[@data-smart='connected-device']
+
+# Blockchain testing
+//*[@data-blockchain='distributed-ledger']
+//*[@data-crypto='cryptocurrency']
+
+# AI/ML testing
+//*[@data-ai='artificial-intelligence']
+//*[@data-ml='machine-learning']
+
+# Cloud testing
+//*[@data-cloud='infrastructure-test']
+//*[@data-aws='amazon-web-services']
+
+# DevOps testing
+//*[@data-devops='continuous-integration']
+//*[@data-cicd='pipeline-test']
+
+# Microservices testing
+//*[@data-microservice='service-architecture']
+//*[@data-docker='container-test']
+
+# Kubernetes testing
+//*[@data-kubernetes='orchestration-test']
+//*[@data-k8s='container-management']
+
+# Serverless testing
+//*[@data-serverless='function-as-a-service']
+//*[@data-lambda='cloud-function']
+
+# Database testing
+//*[@data-database='persistence-test']
+//*[@data-sql='query-test']
+
+# Cache testing
+//*[@data-cache='memory-test']
+//*[@data-redis='key-value-store']
+
+# Message queue testing
+//*[@data-queue='message-broker']
+//*[@data-kafka='event-streaming']
+
+# Search engine testing
+//*[@data-search='indexing-test']
+//*[@data-elasticsearch='full-text-search']
+
+# Big data testing
+//*[@data-bigdata='analytics-test']
+//*[@data-hadoop='distributed-processing']
+
+# Data warehouse testing
+//*[@data-warehouse='business-intelligence']
+//*[@data-etl='extract-transform-load']
+
+# Business intelligence testing
+//*[@data-bi='dashboard-test']
+//*[@data-reporting='analytics-report']
