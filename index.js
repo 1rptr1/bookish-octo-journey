@@ -1,4 +1,5 @@
-import { loadPage } from './browser/browserLoader.js';
+#!/usr/bin/env node
+import { loadPage } from "./browser/browserLoader.js";
 import { extractSignals } from './dom/advancedSignalExtractor.js';
 import { extractScopedSignals } from './dom/scopedSignalExtractor.js';
 import { generateTestCases } from './testcase/advancedTestCaseGenerator.js';
@@ -47,17 +48,23 @@ if (demoMode) {
   process.exit(0);
 }
 
-const { browser, page } = await loadPage(url, { headless: !qaMode });
+const { browser, page } = await loadPage(url, { qa: qaMode });
 
 try {
   if (qaMode) {
-    await injectOverlay(page);
-    const selection = await captureSelection(page);
-    console.log('Selection:', selection);
+    console.log("Waiting for user trigger...");
+    await page.waitForFunction(() => window.__runQAExtraction === true, { timeout: 0 });
+
+    console.log("Trigger received. Collecting selection...");
+    const selection = await page.evaluate(() => window.__qaSelection);
+
+    console.log("Selected Element:", selection);
+    
+    // Continue with DOM extraction and locators
     const locator = generateShadowLocator(selection);
     console.log('Shadow-Aware Locator:', locator);
 
-    const scopedSignals = extractScopedSignals(selection.elements || []);
+    const scopedSignals = extractScopedSignals([selection] || []);
     console.log('Scoped Signals:', scopedSignals);
 
     const scopedTestCases = generateScopedTestCases(scopedSignals);
@@ -73,7 +80,7 @@ try {
       return window.__buildFilteredLocators ? 
         window.__buildFilteredLocators(selectedElement) : 
         [];
-    }, selection.css);
+    }, selection.cssPath);
     
     console.log('Filtered Locators:', filteredLocators);
 
