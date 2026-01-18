@@ -11,7 +11,7 @@ import { injectOverlay } from './ui/injectOverlay.js';
 import { captureSelection } from './ui/captureSelection.js';
 import { callLocalLLM } from './llm/localLlmClient.js';
 import { buildTestCasePrompt } from './llm/promptBuilder.js';
-import { buildFilteredLocators } from './src/qa/generateFilteredLocators.js';
+import { runLLM } from './llm/index.js';
 import yaml from 'js-yaml';
 import fs from 'fs';
 import path from 'path';
@@ -76,6 +76,26 @@ try {
     }, selection.css);
     
     console.log('Filtered Locators:', filteredLocators);
+
+    // -------------------------------------
+    // LLM Activation Layer
+    // -------------------------------------
+    const enhanced = await runLLM({
+        url,
+        dom: selection,
+        signals: scopedSignals,
+        locators: filteredLocators,
+        testcases: scopedTestCases,
+        provider: process.env.LLM_PROVIDER || "ollama",
+        model: process.env.LLM_MODEL || "qwen2.5"
+    });
+
+    console.log("\n==============================");
+    console.log("     FINAL QA OUTPUT");
+    console.log("==============================\n");
+
+    console.log(JSON.stringify(enhanced, null, 2));
+    process.exit();
   } else {
     const signals = await extractSignals(page);
     console.log('DOM Signals:', signals);
